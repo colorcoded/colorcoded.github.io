@@ -1,5 +1,109 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<title>Redirecting to ColorCoded...</title>
-<meta http-equiv="refresh" content="0; URL=https://www.colorcoded.cc/">
-<link rel="canonical" href="https://www.colorcoded.cc/">
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Color Coded</title>
+  <!-- bulma css is fantastic (https://bulma.io/) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
+  <!-- fontawesome has great icons (https://fontawesome.com) -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+    <!-- Navbar / Header -->
+    <div class="block" style="padding:16px">
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <!-- brand / logo (always visible on both mobile <1024px and desktop >=1024px) -->
+        <div class="navbar-brand">
+          <a href="/" class="navbar-item">
+            <h1 class="title">Color Coded</h1>
+          </a>
+          <a href="https://github.com/colorcoded/" class="nav-item">
+            <span class="icon is-large">
+              <i class="fab fa-2x fa-github"></i>
+            </span>
+          </a>
+          <a href="https://www.facebook.com/groups/159831618203477/" class="nav-item">
+            <span class="icon is-large">
+              <i class="fab fa-2x fa-facebook"></i>
+            </span>
+          </a>
+          <!-- hamburger menu only for mobile <1024px-->
+          <!-- append modifier class `is-active` to turn into cross -->
+          <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+            data-target="navbarColorCoded">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <!-- menu items / links (hidden on mobile <1024px) -->
+        <!-- append modifier class `is-active` to display menu -->
+        <div id="navbarColorCoded" class="navbar-menu">
+          <div class="navbar-start">
+          </div>
+          <!-- call to action -->
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <a href="#" class="navbar-item" style="margin-left:20px;">OUR VISION</a>
+              <a href="#" class="navbar-item" style="margin-left:20px;">PARTNERS</a>
+              <a href="#" class="navbar-item" style="margin-left:20px;">PROJECTS</a>
+              <a href="#" class="navbar-item" style="margin-left:20px;">IMPACT</a>
+              <a href="#" class="button is-primary" style="margin-left:20px">
+                <strong>Donate</strong>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- Big message and big picture -->
+    <div class="block">
+      <section class="hero is-primary is-fullheight" style="background: url('./assets/meeting.jpg')">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title is-1">Empowering students of color in Tech @ Cal Poly SLO</h1>
+            <button class="button is-primary is-large">JOIN THE CAMPAIGN</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div> <!-- /. container -->
+</body>
+
+<footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+    });
+  </script>
+</footer>
+
+</html>
