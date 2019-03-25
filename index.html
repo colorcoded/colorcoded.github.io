@@ -48,8 +48,8 @@
         </a>
         <!-- hamburger menu only for mobile <1024px-->
         <!-- append modifier class `is-active` to turn into cross -->
-        <a role="button" id="tripleNavbarBurgerWithCheese" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-          data-target="navbarColorCoded">
+        <a role="button" id="tripleNavbarBurgerWithCheese" class="navbar-burger burger" aria-label="menu"
+          aria-expanded="false" data-target="navbarColorCoded">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -66,7 +66,7 @@
             <a id="visionLink" href="#vision" class="navbar-item" style="margin-left:20px;">OUR VISION</a>
             <a id="partnersLink" href="#partners" class="navbar-item" style="margin-left:20px;">PARTNERS</a>
             <a id="eventsLink" href="#events" class="navbar-item" style="margin-left:20px;">EVENTS</a>
-            <a id="impactLink" href="#impact" class="navbar-item" style="margin-left:20px;">IMPACT</a>
+            <a id="peopleLink" href="#people" class="navbar-item" style="margin-left:20px;">PEOPLE</a>
             <a id="donateLink" href="#donate" class="button is-primary" style="margin-left:20px">
               <strong>Donate</strong>
             </a>
@@ -107,6 +107,7 @@
       </div>
       <div class="tile is-ancestor">
         <div class="tile is-5 is-vertical">
+          <a href=""></a>
           <figure class="image" style="margin:3em">
             <img src="./assets/calpoly.svg" alt="Cal Poly logo">
           </figure>
@@ -124,24 +125,62 @@
   <div class="block" id="events">
     <section class="section hero is-info">
       <div class="container">
-          <h1 class="title has-text-centered">Past Events</h1>
+        <h1 class="title has-text-centered">Past Events</h1>
+      </div>
+      <div class="tile is-ancestor">
+        <div class="tile">
+          <figure class="image" style="margin:3em">
+            <img src="./assets/beatris_mendez_gandica.jpg" alt="Event with Beatris Mendez Gandica">
+          </figure>
         </div>
-        <div class="tile is-ancestor">
-          <div class="tile">
+        <div class="tile">
+          <figure class="image" style="margin:3em">
+            <img src="./assets/diversity_due.jpg" alt="Diversity is Due event">
+          </figure>
+        </div>
+        <div class="tile">
+          <figure class="image" style="margin:3em">
+            <img src="./assets/ice_cream_social.jpg" alt="Ice Cream Social event">
+          </figure>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- people -->
+  <div class="block" id="people">
+    <section class="section hero">
+      <div class="container">
+        <h1 class="title has-text-centered">People</h1>
+      </div>
+      <div class="tile is-ancestor">
+        <!-- 1 -->
+        <div class="tile is-child">
+          <figure class="image" style="margin:3em">
+            <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="...">
+          </figure>
+          <h1 class="title has-text-centered">Zeeshan Khan</h1>
+        </div>
+        <!-- 2 -->
+        <div class="tile is-child">
             <figure class="image" style="margin:3em">
-              <img src="./assets/beatris_mendez_gandica.jpg" alt="Cal Poly logo">
+              <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="...">
             </figure>
+            <h1 class="title has-text-centered">Simon Ibssa</h1>
           </div>
-          <div class="tile">
-              <figure class="image" style="margin:3em">
-                <img src="./assets/diversity_due.jpg" alt="Cal Poly logo">
-              </figure>
-            </div>
-            <div class="tile">
-                <figure class="image" style="margin:3em">
-                  <img src="./assets/ice_cream_social.jpg" alt="Cal Poly logo">
-                </figure>
-              </div>
+        <!-- 3 -->
+        <div class="tile is-child">
+            <figure class="image" style="margin:3em">
+              <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="...">
+            </figure>
+            <h1 class="title has-text-centered">Mugen Blue</h1>
+          </div>
+        <!-- 4 -->
+        <div class="tile is-child">
+            <figure class="image" style="margin:3em">
+              <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="...">
+            </figure>
+            <h1 class="title has-text-centered">Dr. Foaad Khosmood</h1>
+          </div>
       </div>
     </section>
   </div>
@@ -158,7 +197,7 @@
     document.getElementById('visionLink').addEventListener('click', closeNavbar);
     document.getElementById('partnersLink').addEventListener('click', closeNavbar);
     document.getElementById('eventsLink').addEventListener('click', closeNavbar);
-    document.getElementById('impactLink').addEventListener('click', closeNavbar);
+    document.getElementById('peopleLink').addEventListener('click', closeNavbar);
     document.getElementById('donateLink').addEventListener('click', closeNavbar);
 
     document.addEventListener('DOMContentLoaded', () => {
