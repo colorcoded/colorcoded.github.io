@@ -38,12 +38,12 @@
         </a>
         <a href="https://github.com/colorcoded/" class="navbar-item">
           <span class="icon">
-            <i class="fab fa-github"></i>
+            <i id="github-icon" class="fab fa-github"></i>
           </span>
         </a>
         <a href="https://www.facebook.com/groups/159831618203477/" class="navbar-item">
           <span class="icon">
-            <i class="fab fa-facebook"></i>
+            <i id="facebook-icon" class="fab fa-facebook"></i>
           </span>
         </a>
         <!-- hamburger menu only for mobile <1024px-->
@@ -162,25 +162,25 @@
         </div>
         <!-- 2 -->
         <div class="tile is-child">
-            <figure class="image" style="margin:3em">
-              <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="...">
-            </figure>
-            <h1 class="title has-text-centered">Simon Ibssa</h1>
-          </div>
+          <figure class="image" style="margin:3em">
+            <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="...">
+          </figure>
+          <h1 class="title has-text-centered">Simon Ibssa</h1>
+        </div>
         <!-- 3 -->
         <div class="tile is-child">
-            <figure class="image" style="margin:3em">
-              <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="...">
-            </figure>
-            <h1 class="title has-text-centered">Mugen Blue</h1>
-          </div>
+          <figure class="image" style="margin:3em">
+            <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="...">
+          </figure>
+          <h1 class="title has-text-centered">Mugen Blue</h1>
+        </div>
         <!-- 4 -->
         <div class="tile is-child">
-            <figure class="image" style="margin:3em">
-              <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="...">
-            </figure>
-            <h1 class="title has-text-centered">Dr. Foaad Khosmood</h1>
-          </div>
+          <figure class="image" style="margin:3em">
+            <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="...">
+          </figure>
+          <h1 class="title has-text-centered">Dr. Foaad Khosmood</h1>
+        </div>
       </div>
     </section>
   </div>
@@ -200,7 +200,27 @@
     document.getElementById('peopleLink').addEventListener('click', closeNavbar);
     document.getElementById('donateLink').addEventListener('click', closeNavbar);
 
+    // when document is ready, run this function
     document.addEventListener('DOMContentLoaded', () => {
+
+      const modifyClass = () => {
+        var w = document.body.clientWidth;
+        if (w < 400) {
+          const gh = document.getElementById('github-icon');
+          const fb = document.getElementById('facebook-icon');
+          gh.classList.remove('fa-2x');
+          fb.classList.remove('fa-2x');
+        } else if (w >= 401) {
+          const gh = document.getElementById('github-icon');
+          const fb = document.getElementById('facebook-icon');
+          gh.classList.add('fa-2x');
+          fb.classList.add('fa-2x');
+        };
+      };
+      window.addEventListener('resize', modifyClass);
+
+      //Fire it when the page first loads:
+      modifyClass();
 
       // Get all "navbar-burger" elements
       const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
