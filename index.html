@@ -11,6 +11,7 @@
   <!-- fontawesome has great icons (https://fontawesome.com) -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
   <style>
     html {
       scroll-behavior: smooth;
@@ -38,6 +39,105 @@
       margin: auto;
       max-width: 500px;
     }
+
+    /* Slideshow container */
+  .slideshow-container {
+    max-width: 40%;
+    position: relative;
+    margin: auto;
+  }
+
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  /* On smaller screens, decrease text size, or make the gallery larger */
+  @media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+  @media only screen and (max-width: 768px){
+    .prev, .next,.text {font-size: 11px}
+    .slideshow-container {max-width: 100%;}
+  }
+
+  /* end of caorusel (image gallery) */
   </style>
 </head>
 
@@ -81,7 +181,8 @@
             <a id="partnersLink" href="#partners" class="navbar-item" style="margin-left:20px;">PARTNERS</a>
             <a id="eventsLink" href="#events" class="navbar-item" style="margin-left:20px;">EVENTS</a>
             <a id="peopleLink" href="#people" class="navbar-item" style="margin-left:20px;">PEOPLE</a>
-            <a id="donateLink" href="#donate" class="button is-primary" style="margin-left:20px">
+            <a id="peopleLink" href="#contact" class="navbar-item" style="margin-left:20px;">CONTACT US</a>
+            <a id="donateLink" href="https://www.asi.calpoly.edu/paypal3407" class="button is-primary" style="margin-left:20px" target="_blank">
               <strong>Donate</strong>
             </a>
           </div>
@@ -95,7 +196,15 @@
       <div class="hero-body">
         <div class="box" style="background-color:rgba(0,0,0,0.5);">
           <h1 class="title has-text-white is-1">Empowering students of color in tech @ Cal Poly SLO</h1>
-          <button onclick="location.href='#mailing'" class="button is-primary is-large">JOIN THE MAILING LIST</button>
+          <div class="columns">
+            <div class="column">
+              <button onclick="location.href='#mailing'" class="button is-primary is-large">JOIN THE MAILING LIST</button>
+            </div>
+            <div class="column" style="text-align:right;">
+              <h1 class="subtitle has-text-lightgrey is-4">Thursdays, Building 14 - 257 </h1>
+              <h1 class="subtitle has-text-lightgrey is-4">11am - 12pm  </h1>
+            </div>
+
         </div>
       </div>
     </section>
@@ -106,7 +215,7 @@
       <div class="container">
         <div class="hero-body">
           <h1 class="title has-text-centered" style="margin-bottom:2em;">Our Vision</h1>
-          <h2 class="subtitle">The mission of Color Coded is to support the academic and professional success of
+          <h2 class="subtitle" style="text-align:center;">The mission of Color Coded is to support the academic and professional success of
             underrepresented minority groups in tech, with an emphasis on supporting students who identify as Black,
             Latinx, and/or Native American at the California Polytechnic State University, San Luis Obispo.</h2>
         </div>
@@ -119,47 +228,92 @@
       <div class="container">
         <h1 class="title has-text-centered" style="margin-bottom:2em;">Partners</h1>
       </div>
-      <div class="tile is-ancestor">
-        <div class="tile is-5 is-vertical">
-          <a href=""></a>
-          <figure class="image" style="margin:3em">
-            <img src="./assets/calpoly.svg" alt="Cal Poly logo">
+      <div class="columns is-gapless" >
+        <div class="column">
+          <figure class="image is-5by4">
+            <img src="./assets/google.svg">
           </figure>
         </div>
-        <div class="tile is-5 is-vertical">
-          <figure class="image" style="margin:2em;">
-            <a href=""></a>
-            <img src="./assets/google.svg" alt="Google logo">
+        <div class="column">
+          <figure class="image is-5by4">
+            <img src="./assets/microsoft.svg">
+          </figure>
+        </div>
+        <div class="column">
+          <figure class="image is-4by4">
+            <img src="./assets/cs.png">
+          </figure>
+        </div>
+        <div class="column">
+          <figure class="image is-5by4">
+            <img src="./assets/calpoly.svg">
+          </figure>
+        </div>
+        <div class="column">
+          <figure class="image is-5by4">
+            <img src="./assets/ifixit.svg">
           </figure>
         </div>
       </div>
-    </section>
   </div>
-  <!-- past events -->
+  <!-- Past events -->
   <div class="block" id="events">
     <section class="section hero is-info">
       <div class="container">
-        <h1 class="title has-text-centered">Past Events</h1>
+        <h1 class="title has-text-centered" id="events_title">Upcoming Events</h1>
       </div>
-      <div class="tile is-ancestor">
-        <div class="tile">
-          <figure class="image" style="margin:3em">
-            <img src="./assets/beatris_mendez_gandica.jpg" alt="Event with Beatris Mendez Gandica">
-          </figure>
-        </div>
-        <div class="tile">
-          <figure class="image" style="margin:3em">
-            <img src="./assets/diversity_due.jpg" alt="Diversity is Due event">
-          </figure>
-        </div>
-        <div class="tile">
-          <figure class="image" style="margin:3em">
-            <img src="./assets/ice_cream_social.jpg" alt="Ice Cream Social event">
-          </figure>
-        </div>
-      </div>
-    </section>
+      <br>
+  <div class="slideshow-container" >
+
+  <div class="mySlides fade">
+    <div class="numbertext">0 / 5</div>
+    <img src="./assets/ice_cream_social.jpg" style="width:100%">
   </div>
+
+
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 5</div>
+    <img src="./assets/diversity_due.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 5</div>
+    <img src="./assets/beatris_mendez_gandica.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 5</div>
+    <img src="./assets/hathaway.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 5</div>
+    <img src="./assets/gamediversity.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 5</div>
+    <img src="./assets/afroF.jpg" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+  </section>
+  </div>
+
+
   <!-- people -->
   <div class="block" id="people">
     <section class="section hero">
@@ -170,34 +324,39 @@
         <!-- 1 -->
         <div class="tile is-child">
           <figure class="image" style="margin:3em">
-            <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="...">
+            <img class="is-rounded" src="./assets/zee.jpg" alt="...">
           </figure>
           <h1 class="title has-text-centered">Zeeshan Khan</h1>
+          <h1 class="subtitle has-text-centered">Director of Outreach</h1>
         </div>
         <!-- 2 -->
         <div class="tile is-child">
           <figure class="image" style="margin:3em">
-            <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="...">
+            <img class="is-rounded" src="./assets/simon.png" alt="...">
           </figure>
           <h1 class="title has-text-centered">Simon Ibssa</h1>
+          <h1 class="subtitle has-text-centered">Co-Founder</h1>
         </div>
         <!-- 3 -->
         <div class="tile is-child">
           <figure class="image" style="margin:3em">
-            <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="...">
+            <img class="is-rounded" src="./assets/mugen.jpg" alt="...">
           </figure>
           <h1 class="title has-text-centered">Mugen Blue</h1>
+          <h1 class="subtitle has-text-centered">President</h1>
         </div>
         <!-- 4 -->
         <div class="tile is-child">
           <figure class="image" style="margin:3em">
-            <img class="is-rounded" src="https://bulma.io/images/placeholders/128x128.png" alt="...">
+            <img class="is-rounded" src="./assets/foaad.jpg" alt="...">
           </figure>
           <h1 class="title has-text-centered">Dr. Foaad Khosmood</h1>
+          <h1 class="subtitle has-text-centered">Sponsor</h1>
         </div>
       </div>
     </section>
   </div>
+
   <!--Mailing List-->
   <div id="mailing" style="background-color:#eaeaea;">
     <section class="section hero">
@@ -232,10 +391,11 @@
               </div>
           </form>
           </div>
-          
+
           <!--End mc_embed_signup-->
         </section>
      </div>
+
   </div>
 </body>
 
@@ -300,7 +460,40 @@
       }
 
     });
+
   </script>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      if (slideIndex == 1){
+      document.getElementById('events_title').innerHTML = "Upcoming Event"}
+      else {
+      document.getElementById('events_title').innerHTML = "Past Events"}
+    }
+</script>
 </footer>
 
 </html>
