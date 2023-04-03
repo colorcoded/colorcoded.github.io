@@ -19,7 +19,7 @@
         }
 
         .fixed-bg-image {
-            background-image: url("./assets/meeting.jpg");
+            background-image: url("../assets/meeting.jpg");
             background-position: center center;
             background-repeat: no-repeat;
             /* background-attachment: fixed; */
@@ -174,71 +174,94 @@
 <body>
     <!-- Navbar / Header -->
     <div class="block">
-      <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-        <!-- brand / logo (always visible on both mobile <1024px and desktop >=1024px) -->
-        <div class="navbar-brand">
-          <a href="/" class="navbar-item">
-            <!-- <h1 class="title">Color Coded: Diversity in Tech</h1> -->
-            <a class="navbar-brand" href="#">
-              <img src="./assets/CClogo2 2.png" alt = "Logo" style = "width: 280px" style="margin:0px 100px" >
-            </a>
-              
-        
-          </a>
-          <a href="https://github.com/colorcoded/" class="navbar-item">
-            <span class="icon">
-              <i id="github-icon" class="fab fa-github"></i>
-            </span>
-          </a>
-          <a href="https://www.facebook.com/groups/159831618203477/" class="navbar-item">
-            <span class="icon">
-              <i id="facebook-icon" class="fab fa-facebook"></i>
-            </span>
-          </a>
-          <a href=" https://join.slack.com/t/color-coded-workspace/signup" class="navbar-item">
-            <span class="icon">
-              <i id="slack-icon" class="fab fa-2x fa-slack"></i>
-            </span>
-          </a>
-        
-          <!-- hamburger menu only for mobile <1024px-->
-          <!-- append modifier class `is-active` to turn into cross -->
-          <a role="button" id="tripleNavbarBurgerWithCheese" class="navbar-burger burger" aria-label="menu"
-            aria-expanded="false" data-target="navbarColorCoded">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-        <!-- menu items / links (hidden on mobile <1024px) -->
-        <!-- append modifier class `is-active` to display menu -->
-        <div id="navbarColorCoded" class="navbar-menu">
-          <div class="navbar-start">
-          </div>
-          <!-- call to action -->
-          <div class="navbar-end">
-            <div class="navbar-item">
-              <a id="visionLink" href="#vision" class="navbar-item" style="margin-left:20px;">OUR VISION</a>
-              <a id="partnersLink" href="#partners" class="navbar-item" style="margin-left:20px;">PARTNERS</a>
-              <a id="eventsLink" href="#events" class="navbar-item" style="margin-left:20px;">EVENTS</a>
-              <a id="peopleLink" href="#people" class="navbar-item" style="margin-left:20px;">PEOPLE</a>
-              <a id="peopleLink" href="mailto: zkhan06@calpoly.edu"class="navbar-item" style="margin-left:20px;">CONTACT US</a>
-              <a id="donateLink" href="https://securelb.imodules.com/s/699/bp19/interior.aspx?sid=699&gid=1&pgid=961&cid=2272&bledit=1&dids=322.276.486.317.329.352.487.306.363.211.459.325.389.490.330.491.705.338.259.335.215.324.410.336.302.&sort=1" class="button is-primary" style="margin-left:20px" target="_blank">
-                <strong>Donate</strong>
-              </a>
+        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+            <!-- brand / logo (always visible on both mobile <1024px and desktop >=1024px) -->
+            <div class="navbar-brand">
+                <a href="/" class="navbar-item">
+                    <!-- <h1 class="title">Color Coded: Diversity in Tech</h1> -->
+                    <a class="navbar-brand" href="#">
+                        <img src="../assets/CClogo2 2.png" alt="Logo" style="width: 280px" style="margin:0px 100px">
+                    </a>
+
+
+                </a>
+                <a href="https://github.com/colorcoded/" class="navbar-item">
+                    <span class="icon">
+                        <i id="github-icon" class="fab fa-github"></i>
+                    </span>
+                </a>
+                <a href="https://www.facebook.com/groups/159831618203477/" class="navbar-item">
+                    <span class="icon">
+                        <i id="facebook-icon" class="fab fa-facebook"></i>
+                    </span>
+                </a>
+                <a href=" https://join.slack.com/t/color-coded-workspace/signup" class="navbar-item">
+                    <span class="icon">
+                        <i id="slack-icon" class="fab fa-2x fa-slack"></i>
+                    </span>
+                </a>
+
+                <!-- hamburger menu only for mobile <1024px-->
+                <!-- append modifier class `is-active` to turn into cross -->
+                <a role="button" id="tripleNavbarBurgerWithCheese" class="navbar-burger burger" aria-label="menu"
+                    aria-expanded="false" data-target="navbarColorCoded">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
             </div>
-          </div>
-        </div>
-      </nav>
+            <!-- menu items / links (hidden on mobile <1024px) -->
+            <!-- append modifier class `is-active` to display menu -->
+            <div id="navbarColorCoded" class="navbar-menu">
+                <div class="navbar-start">
+                </div>
+                <!-- call to action -->
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <a id="visionLink" href="#vision" class="navbar-item" style="margin-left:20px;">OUR VISION</a>
+                        <a id="partnersLink" href="#partners" class="navbar-item" style="margin-left:20px;">PARTNERS</a>
+                        <a id="eventsLink" href="#events" class="navbar-item" style="margin-left:20px;">EVENTS</a>
+                        <a id="peopleLink" href="#people" class="navbar-item" style="margin-left:20px;">PEOPLE</a>
+                        <a id="peopleLink" href="mailto: zkhan06@calpoly.edu" class="navbar-item"
+                            style="margin-left:20px;">CONTACT US</a>
+                        <a id="donateLink"
+                            href="https://securelb.imodules.com/s/699/bp19/interior.aspx?sid=699&gid=1&pgid=961&cid=2272&bledit=1&dids=322.276.486.317.329.352.487.306.363.211.459.325.389.490.330.491.705.338.259.335.215.324.410.336.302.&sort=1"
+                            class="button is-primary" style="margin-left:20px" target="_blank">
+                            <strong>Donate</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </div>
 
-<body>
+    <!-- Big message and big picture -->
+    <div class="block">
+        <section class="hero is-info is-fullheight-with-navbar ">
+            <div class="hero-body">
+                <div class="container">
+
+                    <div class="box" style="background-color:rgba(10, 10, 10, 0.5);">
+                        <h1 class="title has-text-white is-1">About Us</h1>
+                        <div class="columns is-centered">
+                            <div class="column ">
+                                <button onclick="location.href='#mailing'" class="button is-primary is-large">Join Color
+                                    Coded!</button>
+                            </div>
+                            <div class="column" style="text-align:right;">
+                                <h1 class="subtitle has-text-lightgrey is-4">Thursdays, Building 14 - 257 </h1>
+                                <h1 class="subtitle has-text-lightgrey is-4">11am - 12pm </h1>
+                            </div>
+
+                        </div>
+                    </div>
 
 
 
+                </div>
+        </section>
+    </div>
 
 
 
-
-
-
+    <body>
