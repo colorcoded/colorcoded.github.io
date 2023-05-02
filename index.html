@@ -2,11 +2,11 @@
 <html lang="en" class="has-navbar-fixed-top">
 
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics --> 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148323401-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'UA-148323401-1');
@@ -26,6 +26,18 @@
   <style>
     html {
       scroll-behavior: smooth;
+
+    }
+
+    /* hide scrollbar but allow scrolling */
+    body {
+      -ms-overflow-style: none; /* for Internet Explorer, Edge */
+      scrollbar-width: none; /* for Firefox */
+      overflow-y: scroll; 
+    }
+
+    body::-webkit-scrollbar {
+      display: none; /* for Chrome, Safari, and Opera */
     }
 
     .fixed-bg-image {
@@ -52,103 +64,132 @@
     }
 
     /* Slideshow container */
-  .slideshow-container {
-    max-width: 40%;
-    position: relative;
-    margin: auto;
-  }
+    .slideshow-container {
+      max-width: 40%;
+      position: relative;
+      margin: auto;
+    }
 
-  /* Next & previous buttons */
-  .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
 
-  /* Position the "next button" to the right */
-  .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-  }
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
 
-  /* On hover, add a black background color with a little bit see-through */
-  .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
 
-  /* Caption text */
-  .text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-  }
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
 
-  /* Number text (1/3 etc) */
-  .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-  }
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
 
-  /* The dots/bullets/indicators */
-  .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
 
-  .active, .dot:hover {
-    background-color: #717171;
-  }
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
 
-  /* Fading animation */
-  .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-  }
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
 
-  @-webkit-keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
 
-  @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
-  }
+      to {
+        opacity: 1
+      }
+    }
 
-  /* On smaller screens, decrease text size, or make the gallery larger */
-  @media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
-  }
-  @media only screen and (max-width: 768px){
-    .prev, .next,.text {font-size: 11px}
-    .slideshow-container {max-width: 100%;}
-  }
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
 
-  /* end of caorusel (image gallery) */
+      to {
+        opacity: 1
+      }
+    }
+
+    /* On smaller screens, decrease text size, or make the gallery larger */
+    @media only screen and (max-width: 300px) {
+
+      .prev,
+      .next,
+      .text {
+        font-size: 11px
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+
+      .prev,
+      .next,
+      .text {
+        font-size: 11px
+      }
+
+      .slideshow-container {
+        max-width: 100%;
+      }
+    }
+    
+    
+
+    /* end of caorusel (image gallery) */
   </style>
 </head>
 
@@ -161,27 +202,31 @@
         <a href="/" class="navbar-item">
           <!-- <h1 class="title">Color Coded: Diversity in Tech</h1> -->
           <a class="navbar-brand" href="#">
-            <img src="./assets/CClogo2 2.png" alt = "Logo" style = "width: 280px" style="margin:0px 100px" >
+            <img src="./assets/CClogo2 2.png" alt="Logo" style="width: 280px" style="margin:0px 100px">
           </a>
-            
-      
+
         </a>
+
+
         <a href="https://github.com/colorcoded/" class="navbar-item">
           <span class="icon">
-            <i id="github-icon" class="fab fa-github"></i>
+            <i id="github-icon" class="fab fda-2x fa-github"></i>
           </span>
         </a>
-        <a href="https://www.facebook.com/groups/159831618203477/" class="navbar-item">
-          <span class="icon">
-            <i id="facebook-icon" class="fab fa-facebook"></i>
-          </span>
-        </a>
+
         <a href=" https://join.slack.com/t/color-coded-workspace/signup" class="navbar-item">
           <span class="icon">
             <i id="slack-icon" class="fab fa-2x fa-slack"></i>
           </span>
         </a>
-      
+
+        <a href="https://discord.gg/dhaNwnvD" class="navbar-item">
+          <span class="icon">
+            <i class="fab fa-2x fa-discord"></i>
+        
+          </span>
+        </a>
+
         <!-- hamburger menu only for mobile <1024px-->
         <!-- append modifier class `is-active` to turn into cross -->
         <a role="button" id="tripleNavbarBurgerWithCheese" class="navbar-burger burger" aria-label="menu"
@@ -191,6 +236,7 @@
           <span aria-hidden="true"></span>
         </a>
       </div>
+
       <!-- menu items / links (hidden on mobile <1024px) -->
       <!-- append modifier class `is-active` to display menu -->
       <div id="navbarColorCoded" class="navbar-menu">
@@ -199,12 +245,15 @@
         <!-- call to action -->
         <div class="navbar-end">
           <div class="navbar-item">
-            <a id="visionLink" href="#vision" class="navbar-item" style="margin-left:20px;">OUR VISION</a>
-            <a id="partnersLink" href="#partners" class="navbar-item" style="margin-left:20px;">PARTNERS</a>
-            <a id="eventsLink" href="#events" class="navbar-item" style="margin-left:20px;">EVENTS</a>
-            <a id="peopleLink" href="#people" class="navbar-item" style="margin-left:20px;">PEOPLE</a>
-            <a id="peopleLink" href="mailto: zkhan06@calpoly.edu"class="navbar-item" style="margin-left:20px;">CONTACT US</a>
-            <a id="donateLink" href="https://www.asi.calpoly.edu/paypal3407" class="button is-primary" style="margin-left:20px" target="_blank">
+            <a id="visionLink" href="../colorcoded.github.io/index.html#vision" class="navbar-item" style="margin-left:20px;">OUR VISION</a>
+            <a id="partnersLink" href="../colorcoded.github.io/index.html#partners" class="navbar-item" style="margin-left:20px;">PARTNERS</a>
+            <a id="eventsLink" href="../colorcoded.github.io/index.html#events" class="navbar-item" style="margin-left:20px;">EVENTS</a>
+            <a id="peopleLink" href="./html/about.html" class="navbar-item" style="margin-left:20px;">PEOPLE</a>
+            <!-- <a id="peopleLink" href="mailto: zkhan06@calpoly.edu" class="navbar-item" style="margin-left:20px;">CONTACT
+              US</a> -->
+            <a id="donateLink"
+              href="https://securelb.imodules.com/s/699/bp19/interior.aspx?sid=699&gid=1&pgid=961&cid=2272&bledit=1&dids=322.276.486.317.329.352.487.306.363.211.459.325.389.490.330.491.705.338.259.335.215.324.410.336.302.&sort=1"
+              class="button is-primary" style="margin-left:20px" target="_blank">
               <strong>Donate</strong>
             </a>
           </div>
@@ -216,7 +265,7 @@
   <div class="block">
     <section class="hero is-primary is-fullheight fixed-bg-image">
       <div class="hero-body">
-        <div class="box" style="background-color:rgba(0,0,0,0.5);">
+        <div class="box" style="background-color:rgba(10, 10, 10, 0.5);">
           <h1 class="title has-text-white is-1">Empowering students of color in tech @ Cal Poly SLO</h1>
           <div class="columns">
             <!-- <div class="column">
@@ -227,11 +276,11 @@
             </div>
             <div class="column" style="text-align:right;">
               <h1 class="subtitle has-text-lightgrey is-4">Thursdays, Building 14 - 257 </h1>
-              <h1 class="subtitle has-text-lightgrey is-4">11am - 12pm  </h1>
+              <h1 class="subtitle has-text-lightgrey is-4">11am - 12pm </h1>
             </div>
 
+          </div>
         </div>
-      </div>
     </section>
   </div>
   <!-- Mission Statement -->
@@ -240,12 +289,12 @@
       <div class="container">
         <div class="hero-body">
           <h1 class="title has-text-centered" style="margin-bottom:2em;">Our Vision</h1>
-          <h2 class="subtitle" style="text-align:center;">The mission of Color Coded is to support the academic and professional success of
+          <h2 class="subtitle" style="text-align:center;">The mission of Color Coded is to support the academic and
+            professional success of
             underrepresented minority groups in tech, with an emphasis on supporting students who identify as Black,
             Latinx, and/or Native American at the California Polytechnic State University, San Luis Obispo.</h2>
-            <h1 class="title has-text-centered" style="margin-bottom:1em;">Expanding Access, Opportunities, and Community</h1>  
-            <h2 class="subtitle" style="text-align:center;">Check out our latest club newsletter here, make sure to subscribe to stay up to date!</h2>
-            <iframe id="myIframe" class="event-img" src="https://mailchi.mp/3ef7bfb420db/colorcoded-14179414" style="width: 95%; height: 400px; border: 2px solid #ccc;"></iframe>
+          <br>
+          
         </div>
       </div>
     </div>
@@ -256,7 +305,7 @@
       <div class="container">
         <h1 class="title has-text-centered" style="margin-bottom:2em;">Partners</h1>
       </div>
-      <div class="columns is-gapless" >
+      <div class="columns is-gapless">
         <div class="column">
           <figure class="image is-5by4">
             <img src="./assets/google.svg">
@@ -288,115 +337,91 @@
           </figure>
         </div>
       </div>
-  </div>
-  <!-- Past events -->
-  <div class="block" id="events">
-    <section class="section hero is-info">
-      <div class="container">
-        <h1 class="title has-text-centered" id="events_title">Past Events</h1>
-      </div>
-      <br>
-  <div class="slideshow-container" >
 
-  <div class="mySlides fade">
-    <div class="numbertext">0 / 5</div>
-    <img src="./assets/RESUME REVIEW.png" style="width:100%">
-  </div>
-
-
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 5</div>
-    <img src="./assets/CCmeet1.png" style="width:100%">
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 5</div>
-    <img src="./assets/beatris_mendez_gandica.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">3 / 5</div>
-    <img src="./assets/hathaway.png" style="width:100%">
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">4 / 5</div>
-    <img src="./assets/diversity_due.jpg" style="width:100%">
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">5 / 5</div>
-    <img src="./assets/afroF.jpg" style="width:100%">
-  </div>
-
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-  </div>
-  <br>
-
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-    <span class="dot" onclick="currentSlide(5)"></span>
-    <span class="dot" onclick="currentSlide(5)"></span>
-  </div>
-  </section>
-  </div>
 
 
   <!-- people -->
-  <div class="block" id="people">
+  <!-- <div class="block" id="people">
     <section class="section hero">
       <div class="container">
         <h1 class="title has-text-centered">People</h1>
       </div>
       <div class="tile is-ancestor">
-        <!-- 1 -->
-        <div class="tile is-child">
-          <figure class="image" style="margin:3em">
-            <img class="is-rounded" src="./assets/zee.jpg" alt="...">
-          </figure>
-          <h1 class="title has-text-centered">Zeeshan Khan</h1>
-          <h1 class="subtitle has-text-centered">President & Co-Founder</h1>
-        </div>
         
-        <!-- 2 -->
-        <div class="tile is-child">
-          <figure class="image" style="margin:3em">
-            <img class="is-rounded" src="./assets/mugen.jpg" alt="...">
-          </figure>
-          <h1 class="title has-text-centered">Mugen Blue</h1>
-          <h1 class="subtitle has-text-centered">Club Chair & Co-Founder</h1>
-        </div>
-        <!-- 3 -->
-        <div class="tile is-child">
-          <figure class="image" style="margin:3em">
-            <img class="is-rounded" src="./assets/dani.jpeg" alt="...">
-          </figure>
-          <h1 class="title has-text-centered">Dani Lopez</h1>
-          <h1 class="subtitle has-text-centered">Vice President</h1>
-        </div>
-        <!-- 4 -->
-        <div class="tile is-child">
-          <figure class="image" style="margin:3em">
-            <img class="is-rounded" src="./assets/simon.png" alt="...">
-          </figure>
-          <h1 class="title has-text-centered">Simon Ibssa</h1>
-          <h1 class="subtitle has-text-centered">Co-Founder</h1>
-        </div>
-        <!-- 5 -->
-        <div class="tile is-child">
-          <figure class="image" style="margin:3em">
-            <img class="is-rounded" src="./assets/justin.jpeg" alt="...">
-          </figure>
-          <h1 class="title has-text-centered">Justin Youn</h1>
-          <h1 class="subtitle has-text-centered">Co-Founder</h1>
-        </div>
-        <!-- 6 -->
 
+        2
+        <div class="tile is-child">
+          <figure class="image" style="margin:3em">
+            <img class="is-rounded" src="./assets/CClogo2.png" alt="...">
+          </figure>
+          <h1 class="title has-text-centered">Anthony Colin</h1>
+          <h1 class="subtitle has-text-centered">President</h1>
+        </div>
+
+        3
+        <div class="tile is-child">
+          <figure class="image" style="margin:3em">
+            <img class="is-rounded" src="./assets/CClogo2.png" alt="...">
+          </figure>
+          <h1 class="title has-text-centered">Sarah Ellwein</h1>
+          <h1 class="subtitle has-text-centered"> TBD</h1>
+        </div>
+
+        4
+        <div class="tile is-child">
+          <figure class="image" style="margin:3em">
+            <img class="is-rounded" src="./assets/CClogo2.png" alt="...">
+          </figure>
+          <h1 class="title has-text-centered">Leticia Mezzetti</h1>
+          <h1 class="subtitle has-text-centered">TBD</h1>
+        </div>
+
+        5
+        <div class="tile is-child">
+          <figure class="image" style="margin:3em">
+            <img class="is-rounded" src="./assets/CClogo2.png" alt="...">
+          </figure>
+          <h1 class="title has-text-centered">Luke Fanguna</h1>
+          <h1 class="subtitle has-text-centered"> TBD </h1>
+        </div>
+
+        6
+        <div class="tile is-child">
+          <figure class="image" style="margin:3em">
+            <img class="is-rounded" src="./assets/CClogo2.png" alt="...">
+          </figure>
+          <h1 class="title has-text-centered">David Hernandez</h1>
+          <h1 class="subtitle has-text-centered"> TBD </h1>
+        </div>
+
+        7
+        <div class="tile is-child">
+          <figure class="image" style="margin:3em">
+            <img class="is-rounded" src="./assets/CClogo2.png" alt="...">
+          </figure>
+          <h1 class="title has-text-centered"> Shiv Panchal </h1>
+          <h1 class="subtitle has-text-centered">Diversity Officer</h1>
+        </div>
+
+        8
+        <div class="tile is-child">
+          <figure class="image" style="margin:3em">
+            <img class="is-rounded" src="./assets/CClogo2.png" alt="...">
+          </figure>
+          <h1 class="title has-text-centered"> Reza M </h1>
+          <h1 class="subtitle has-text-centered"> TBD </h1>
+        </div>
+
+        8
+        <div class="tile is-child">
+          <figure class="image" style="margin:3em">
+            <img class="is-rounded" src="./assets/CClogo2.png" alt="...">
+          </figure>
+          <h1 class="title has-text-centered"> Samantha Alejos </h1>
+          <h1 class="subtitle has-text-centered"> TBD </h1>
+        </div>
+
+        9
         <div class="tile is-child">
           <figure class="image" style="margin:3em">
             <img class="is-rounded" src="./assets/foaad.jpg" alt="...">
@@ -404,76 +429,111 @@
           <h1 class="title has-text-centered">Dr. Foaad Khosmood</h1>
           <h1 class="subtitle has-text-centered">Faculty Advisor</h1>
         </div>
+
+        1
+        <div class="tile is-child">
+          <figure class="image" style="margin:3em">
+            <img class="is-rounded" src="./assets/zee.jpg" alt="...">
+          </figure>
+          <h1 class="title has-text-centered">Zeeshan Khan</h1>
+          <h1 class="subtitle has-text-centered">Mentor & Advisor</h1>
+        </div>
+
+
       </div>
     </section>
-  </div>
+  </div> -->
+
+  <!-- <div class="block" id="about-us" style="background-color: #ffd84d;"> -->
+  <section class="setion hero">
+    <!-- <h1 class="title has-text-centered">About Us!</h1> -->
+
+    <!-- <div class="columns is-mobile is-centered">
+      <div class="column is-3">
+        <button onclick="location.href='./html/about.html'" class="button is-primary is-large is-fullwidth">Learn
+          More!</button>
+      </div>
+    </div> -->
+  </section>
+  <!-- </div> -->
+
 
   <!--Mailing List-->
   <div id="mailing" style="background-color:#eaeaea;">
     <section class="section hero">
-      <h1  class="title has-text-centered">Join the Mailing List</h1>
+      <h1 class="title has-text-centered">Join the Mailing List</h1>
       <div class="mailing-container">
+        <!-- Subject to Change -->
+
         <!-- Begin Mailchimp Signup Form -->
         <div id="mc_embed_signup">
-          <form action="https://facebook.us19.list-manage.com/subscribe/post?u=504f77727a99ebe56727968fd&amp;id=f09f870a61" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-              <div id="mc_embed_signup_scroll">
-          <div style="text-align: right" class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-          <div class="mc-field-group">
-            <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-          </label>
-            <input type="email" value="" name="EMAIL" class="required email input" id="mce-EMAIL">
-          </div>
-          <div class="mc-field-group">
-            <label for="mce-FNAME">First Name  <span class="asterisk">*</span>
-          </label>
-            <input type="text" value="" name="FNAME" class="required input" id="mce-FNAME">
-          </div>
-          <div class="mc-field-group">
-            <label for="mce-LNAME">Last Name  <span class="asterisk">*</span>
-          </label>
-            <input type="text" value="" name="LNAME" class="required input" id="mce-LNAME">
-          </div>
-            <div id="mce-responses" class="clear">
-              <div class="response" id="mce-error-response" style="display:none"></div>
-              <div class="response" id="mce-success-response" style="display:none"></div>
-            </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_504f77727a99ebe56727968fd_f09f870a61" tabindex="-1" value=""></div>
-              <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+          <form
+            action="https://facebook.us19.list-manage.com/subscribe/post?u=504f77727a99ebe56727968fd&amp;id=f09f870a61"
+            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
+            target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+              <div style="text-align: right" class="indicates-required"><span class="asterisk">*</span> indicates
+                required</div>
+              <div class="mc-field-group">
+                <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
+                </label>
+                <input type="email" value="" name="EMAIL" class="required email input" id="mce-EMAIL">
               </div>
+              <div class="mc-field-group">
+                <label for="mce-FNAME">First Name <span class="asterisk">*</span>
+                </label>
+                <input type="text" value="" name="FNAME" class="required input" id="mce-FNAME">
+              </div>
+              <div class="mc-field-group">
+                <label for="mce-LNAME">Last Name <span class="asterisk">*</span>
+                </label>
+                <input type="text" value="" name="LNAME" class="required input" id="mce-LNAME">
+              </div>
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display:none"></div>
+                <div class="response" id="mce-success-response" style="display:none"></div>
+              </div>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                  name="b_504f77727a99ebe56727968fd_f09f870a61" tabindex="-1" value=""></div>
+              <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                  class="button"></div>
+            </div>
           </form>
-          </div>
+        </div>
 
-          <!--End mc_embed_signup-->
-        </section>
-     </div>
+        <!--End mc_embed_signup-->
+    </section>
+  </div>
 
   </div>
 
   <!-- Join Slack Reminder-->
   <div id="slack" style="background-color:#c06ce2c5;">
     <section class="section hero">
-      
+
       <a href=" https://join.slack.com/t/color-coded-workspace/signup" class="navbar-item">
         <span class="icon">
           <i id="slack-icon" class="fab fa-3x fa-slack ">
           </i>
         </span>
         <div class="column">
-      <b style= "color:#5c5c5c; text-align: center;" class="title has-text-centered">Join our Slack Channel with your calpoly.edu email!</b>
+          <b style="color:#5c5c5c; text-align: center;" class="title has-text-centered">Join our Slack Channel!</b>
+          <h5>Requires calpoly.edu email</h5>
         </div>
-      <!--<a href=" https://join.slack.com/t/color-coded-workspace/signup" class="navbar-item">-->
+        <!--<a href=" https://join.slack.com/t/color-coded-workspace/signup" class="navbar-item">-->
         &#160;
-        
+
       </a>
       &#160;
-      <img src="./assets/CClogo2 2.png" alt = "Logo" style = "width: 280px" style="margin:1px 100px" >
+      <img src="./assets/CClogo2 2.png" alt="Logo" style="width: 280px" style="margin:1px 100px">
       &#160;
       Copyright 2021 |
       California Polytechnic State University, San Luis Obispo |
       Color Coded: Diversity in Tech | Professional Student Organization
-      
-  </section>
-  </div>    
+
+    </section>
+  </div>
 </body>
 
 <footer>
@@ -555,22 +615,24 @@
       var i;
       var slides = document.getElementsByClassName("mySlides");
       var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
       for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
+        slides[i].style.display = "none";
       }
       for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
+        dots[i].className = dots[i].className.replace(" active", "");
       }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-      if (slideIndex == 1){
-      document.getElementById('events_title').innerHTML = "Past Events"}
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      if (slideIndex == 1) {
+        document.getElementById('events_title').innerHTML = "Past Events"
+      }
       else {
-      document.getElementById('events_title').innerHTML = "Past Events"}
+        document.getElementById('events_title').innerHTML = "Past Events"
+      }
     }
-</script>
+  </script>
 </footer>
 
 </html>
