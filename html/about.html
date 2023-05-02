@@ -3,265 +3,658 @@
 
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Color Coded - About Us!</title>
-    <!-- bulma css is fantastic (https://bulma.io/) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
-    <!-- fontawesome has great icons (https://fontawesome.com) -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Color Coded - About Us!</title>
+  <!-- bulma css is fantastic (https://bulma.io/) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
+  <!-- fontawesome has great icons (https://fontawesome.com) -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <!-- <script source="https://kit.fontawesome.com/7091d2547f.js" crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .fixed-bg-image {
-            background-image: url("../assets/meeting.jpg");
-            background-position: center center;
-            background-repeat: no-repeat;
-            /* background-attachment: fixed; */
-            background-size: cover;
-            background-color: #999;
-        }
+    h2 {
+      display: inline;
+    }
 
-        .asterisk {
-            color: #cc1310
-        }
 
-        .button {
-            margin: 5px 0;
-        }
+    .tab {
+      display: inline-block;
+      margin-left: 15px;
+    }
 
-        .mailing-container {
-            width: 75%;
-            margin: auto;
-            max-width: 500px;
-        }
 
-        /* Slideshow container */
-        .slideshow-container {
-            max-width: 40%;
-            position: relative;
-            margin: auto;
-        }
+    .fixed-bg-image {
+      background-image: url("../assets/meeting.jpg");
+      background-position: center center;
+      background-repeat: no-repeat;
+      /* background-attachment: fixed; */
+      background-size: cover;
+      background-color: #999;
+    }
 
-        /* Next & previous buttons */
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-        }
+    .asterisk {
+      color: #cc1310
+    }
 
-        /* Position the "next button" to the right */
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
+    .button {
+      margin: 5px 0;
+    }
 
-        /* On hover, add a black background color with a little bit see-through */
-        .prev:hover,
-        .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
+    .mailing-container {
+      width: 75%;
+      margin: auto;
+      max-width: 500px;
+    }
 
-        /* Caption text */
-        .text {
-            color: #f2f2f2;
-            font-size: 15px;
-            padding: 8px 12px;
-            position: absolute;
-            bottom: 8px;
-            width: 100%;
-            text-align: center;
-        }
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 40%;
+      position: relative;
+      margin: auto;
+    }
 
-        /* Number text (1/3 etc) */
-        .numbertext {
-            color: #f2f2f2;
-            font-size: 12px;
-            padding: 8px 12px;
-            position: absolute;
-            top: 0;
-        }
+    /* Next & previous buttons */
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
 
-        /* The dots/bullets/indicators */
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
 
-        .active,
-        .dot:hover {
-            background-color: #717171;
-        }
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
 
-        /* Fading animation */
-        .fade {
-            -webkit-animation-name: fade;
-            -webkit-animation-duration: 1.5s;
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
 
-        @-webkit-keyframes fade {
-            from {
-                opacity: .4
-            }
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
 
-            to {
-                opacity: 1
-            }
-        }
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
 
-        @keyframes fade {
-            from {
-                opacity: .4
-            }
+    .active,
+    .dot:hover {
+      background-color: #717171;
+    }
 
-            to {
-                opacity: 1
-            }
-        }
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
 
-        /* On smaller screens, decrease text size, or make the gallery larger */
-        @media only screen and (max-width: 300px) {
+    img {
+      width: 250px;
+      height: auto;
+    }
 
-            .prev,
-            .next,
-            .text {
-                font-size: 11px
-            }
-        }
 
-        @media only screen and (max-width: 768px) {
+    @-webkit-keyframes fade {
+      from {
+        opacity: .4
+      }
 
-            .prev,
-            .next,
-            .text {
-                font-size: 11px
-            }
+      to {
+        opacity: 1
+      }
+    }
 
-            .slideshow-container {
-                max-width: 100%;
-            }
-        }
+    @keyframes fade {
+      from {
+        opacity: .4
+      }
 
-        /* end of caorusel (image gallery) */
-    </style>
+      to {
+        opacity: 1
+      }
+    }
+
+    /* On smaller screens, decrease text size, or make the gallery larger */
+    @media only screen and (max-width: 300px) {
+
+      .prev,
+      .next,
+      .text {
+        font-size: 11px
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+
+      .prev,
+      .next,
+      .text {
+        font-size: 11px
+      }
+
+      .slideshow-container {
+        max-width: 100%;
+      }
+    }
+
+    /* end of caorusel (image gallery) */
+  </style>
 </head>
 
 
 
 <body>
-    <!-- Navbar / Header -->
-    <div class="block">
-        <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-            <!-- brand / logo (always visible on both mobile <1024px and desktop >=1024px) -->
-            <div class="navbar-brand">
-                <a href="/" class="navbar-item">
-                    <!-- <h1 class="title">Color Coded: Diversity in Tech</h1> -->
-                    <a class="navbar-brand" href="#">
-                        <img src="../assets/CClogo2 2.png" alt="Logo" style="width: 280px" style="margin:0px 100px">
-                    </a>
+  <!-- Navbar / Header -->
+  <div class="block">
+    <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+      <!-- brand / logo (always visible on both mobile <1024px and desktop >=1024px) -->
+      <div class="navbar-brand">
+        <a href="/" class="navbar-item">
+          <!-- <h1 class="title">Color Coded: Diversity in Tech</h1> -->
+          <a class="navbar-brand" href="../index.html">
+            <img src="../assets/CClogo2 2.png" alt="Logo" style="width: 280px" style="margin:0px 100px">
+          </a>
+        </a>
+        <a href="https://github.com/colorcoded/" class="navbar-item">
+          <span class="icon">
+            <i id="github-icon" class="fab fa-2x fa-github"></i>
+          </span>
+        </a>
+        <a href=" https://join.slack.com/t/color-coded-workspace/signup" class="navbar-item">
+          <span class="icon">
+            <i id="slack-icon" class="fab fa-2x fa-slack"></i>
+          </span>
+        </a>
+        <a href="https://discord.gg/dhaNwnvD" class="navbar-item">
+          <span class="icon">
+            <i class="fab fa-2x fa-discord"></i>
 
+          </span>
+        </a>
 
-                </a>
-                <a href="https://github.com/colorcoded/" class="navbar-item">
-                    <span class="icon">
-                        <i id="github-icon" class="fab fa-github"></i>
-                    </span>
-                </a>
-                <a href="https://www.facebook.com/groups/159831618203477/" class="navbar-item">
-                    <span class="icon">
-                        <i id="facebook-icon" class="fab fa-facebook"></i>
-                    </span>
-                </a>
-                <a href=" https://join.slack.com/t/color-coded-workspace/signup" class="navbar-item">
-                    <span class="icon">
-                        <i id="slack-icon" class="fab fa-2x fa-slack"></i>
-                    </span>
-                </a>
+        <!-- hamburger menu only for mobile <1024px-->
+        <!-- append modifier class `is-active` to turn into cross -->
+        <a role="button" id="tripleNavbarBurgerWithCheese" class="navbar-burger burger" aria-label="menu"
+          aria-expanded="false" data-target="navbarColorCoded">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <!-- menu items / links (hidden on mobile <1024px) -->
+      <!-- append modifier class `is-active` to display menu -->
+      <div id="navbarColorCoded" class="navbar-menu">
+        <div class="navbar-start">
+        </div>
+        <!-- call to action -->
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a id="visionLink" href="#vision" class="navbar-item" style="margin-left:20px;">OUR VISION</a>
+            <a id="partnersLink" href="#partners" class="navbar-item" style="margin-left:20px;">PARTNERS</a>
+            <a id="eventsLink" href="#events" class="navbar-item" style="margin-left:20px;">EVENTS</a>
+            <a id="peopleLink" href="#people" class="navbar-item" style="margin-left:20px;">PEOPLE</a>
+            <!-- <a id="peopleLink" href="mailto: zkhan06@calpoly.edu" class="navbar-item" style="margin-left:20px;">CONTACT
+              US</a> -->
+            <a id="donateLink"
+              href="https://securelb.imodules.com/s/699/bp19/interior.aspx?sid=699&gid=1&pgid=961&cid=2272&bledit=1&dids=322.276.486.317.329.352.487.306.363.211.459.325.389.490.330.491.705.338.259.335.215.324.410.336.302.&sort=1"
+              class="button is-primary" style="margin-left:20px" target="_blank">
+              <strong>Donate</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
 
-                <!-- hamburger menu only for mobile <1024px-->
-                <!-- append modifier class `is-active` to turn into cross -->
-                <a role="button" id="tripleNavbarBurgerWithCheese" class="navbar-burger burger" aria-label="menu"
-                    aria-expanded="false" data-target="navbarColorCoded">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </a>
-            </div>
-            <!-- menu items / links (hidden on mobile <1024px) -->
-            <!-- append modifier class `is-active` to display menu -->
-            <div id="navbarColorCoded" class="navbar-menu">
-                <div class="navbar-start">
-                </div>
-                <!-- call to action -->
-                <div class="navbar-end">
-                    <div class="navbar-item">
-                        <a id="visionLink" href="#vision" class="navbar-item" style="margin-left:20px;">OUR VISION</a>
-                        <a id="partnersLink" href="#partners" class="navbar-item" style="margin-left:20px;">PARTNERS</a>
-                        <a id="eventsLink" href="#events" class="navbar-item" style="margin-left:20px;">EVENTS</a>
-                        <a id="peopleLink" href="#people" class="navbar-item" style="margin-left:20px;">PEOPLE</a>
-                        <a id="peopleLink" href="mailto: zkhan06@calpoly.edu" class="navbar-item"
-                            style="margin-left:20px;">CONTACT US</a>
-                        <a id="donateLink"
-                            href="https://securelb.imodules.com/s/699/bp19/interior.aspx?sid=699&gid=1&pgid=961&cid=2272&bledit=1&dids=322.276.486.317.329.352.487.306.363.211.459.325.389.490.330.491.705.338.259.335.215.324.410.336.302.&sort=1"
-                            class="button is-primary" style="margin-left:20px" target="_blank">
-                            <strong>Donate</strong>
-                        </a>
+  <!-- Big message and big picture -->
+  <div class="block">
+    <section class="hero is-info is-fullheight-with-navbar fixed-bg-image">
+      <div class="hero-body">
+        <div class="container">
+
+          <div class="box" style="background-color:rgba(10, 10, 10, 0.5);">
+            <h1 class="title has-text-white is-1">About Us</h1>
+            <div class="columns is-centered">
+              <div class="column ">
+                <!-- <button onclick="location.href='#mailing'" class="button is-primary is-large">Join Color
+                                    Coded!</button> -->
+
+                <div class="box">
+                  <article class="media">
+                    <div class="media-left">
+                      <figure class="image is-128x128">
+                        <img src="../assets/CClogo2.png" alt="Image">
+                      </figure>
                     </div>
-                </div>
-            </div>
-        </nav>
-    </div>
+                    <div class="media-content">
+                      <div class="content is-medium">
+                        <p>
+                        <h2>Anthony Colin</h2> <br>
+                        <medium>President</medium> <span class="tab"></span> <small> CSC</small>
+                        <br> <br>
+                        As the President, my goal is to establish Color Coded as a club that caters to anyone interested
+                        in technology. Being a transfer student from an underrepresented background, I empathize with
+                        the challenges of studying at Cal Poly. For this reason, the Color Coded board and myself have
+                        made it a priority to create a robust community that welcomes individuals of all backgrounds who
+                        share a common interest in technology.
+                        <br><br>
+                        My hobbies include weightlifting, basketball, and video games.
+                        <br><br>
+                        I am thrilled to have the opportunity to meet all of you! If you have any questions about the
+                        club or wish to get involved, please do not hesitate to reach out to me.
+                        </p>
+                        <!-- </div>
+                      <nav class="level is-mobile">
+                        <div class="level-left">
+                          <a class="level-item" aria-label="reply">
+                            <span class="icon is-large">
+                              <i class="fab fa-2x fa-github" aria-hidden="true"></i>
+                            </span>
+                          </a>
 
-    <!-- Big message and big picture -->
-    <div class="block">
-        <section class="hero is-info is-fullheight-with-navbar ">
-            <div class="hero-body">
-                <div class="container">
-
-                    <div class="box" style="background-color:rgba(10, 10, 10, 0.5);">
-                        <h1 class="title has-text-white is-1">About Us</h1>
-                        <div class="columns is-centered">
-                            <div class="column ">
-                                <button onclick="location.href='#mailing'" class="button is-primary is-large">Join Color
-                                    Coded!</button>
-                            </div>
-                            <div class="column" style="text-align:right;">
-                                <h1 class="subtitle has-text-lightgrey is-4">Thursdays, Building 14 - 257 </h1>
-                                <h1 class="subtitle has-text-lightgrey is-4">11am - 12pm </h1>
-                            </div>
+                          <a class="level-item" aria-label="retweet">
+                            <span class="icon is-large">
+                              <i class="fab fa-2x fa-linkedin" aria-hidden="true"></i>
+                            </span>
+                          </a>
 
                         </div>
-                    </div>
-
-
-
+                      </nav> -->
+                      </div>
+                  </article>
                 </div>
-        </section>
-    </div>
+
+
+                <div class="box">
+                  <article class="media">
+                    <div class="media-left">
+                      <figure class="image is-128x128">
+                        <img src="../assets/CClogo2.png" alt="Image">
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <div class="content is-medium">
+                        <p>
+                        <h2>Leticia Mezzetti</h2> <br>
+                        <medium>Vice President</medium> <span class="tab"></span> <small>LAES</small>
+                        <br> <br>
+                        Liberal Arts and Engineering Studies major + Media Arts, Society, and Technology minor
+                        </p>
+                      </div>
+                      <!-- <nav class="level is-mobile">
+                        <div class="level-left">
+                          <a class="level-item" aria-label="reply">
+                            <span class="icon is-large">
+                              <i class="fab fa-2x fa-github" aria-hidden="true"></i>
+                            </span>
+                          </a>
+
+                          <a class="level-item" aria-label="retweet">
+                            <span class="icon is-large">
+                              <i class="fab fa-2x fa-linkedin" aria-hidden="true"></i>
+                            </span>
+                          </a>
+
+                        </div>
+                      </nav> -->
+                    </div>
+                  </article>
+                </div>
+
+                <!-- Treasurer -->
+                <div class="box">
+                  <article class="media">
+                    <div class="media-left">
+                      <figure class="image is-128x128">
+                        <img src="../assets/Sarah.jpg" alt="Image" width="250" height="600">
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <div class="content is-medium">
+                        <p>
+                        <h2>Sarah Ellwein</h2> <br>
+                        <medium>Vice President</medium> <span class="tab"></span> <small>MATH</small>
+                        <br> <br>
+                        Mathematics major + Data Science minor/4th year transfer student
+                        <br> <br>
+                        As the treasurer of Color Coded, I strive to create a welcoming environment for those navigating
+                        the world of computer science. It can be overwhelming and intimidating, especially for newcomers
+                        to the field. I am passionate about fostering a sense of community and support for all
+                        individuals pursuing a computer science education.
+                        <br> <br>
+                        I also enjoy various hobbies in my free time: nail art, yoga, video games, and graphic novels or
+                        science fiction.
+                        <br> <br>
+                        I look forward to serving this club and contributing to its inclusive and supportive
+                        environment!
+                        </p>
+                        <!-- </div>
+                      <nav class="level is-mobile">
+                        <div class="level-left">
+                          <a class="level-item" aria-label="reply">
+                            <span class="icon is-large">
+                              <i class="fab fa-2x fa-github" aria-hidden="true"></i>
+                            </span>
+                          </a>
+
+                          <a class="level-item" aria-label="retweet">
+                            <span class="icon is-large">
+                              <i class="fab fa-2x fa-linkedin" aria-hidden="true"></i>
+                            </span>
+                          </a>
+
+                        </div>
+                      </nav> -->
+                      </div>
+                  </article>
+                </div>
+
+                <!-- Secretary -->
+                <div class="box">
+                  <article class="media">
+                    <div class="media-left">
+                      <figure class="image is-128x128">
+                        <img src="../assets/CClogo2.png" alt="Image">
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <div class="content is-medium">
+                        <p>
+                        <h2>Luke Fanguna</h2> <br>
+                        <medium>Secretary</medium> <span class="tab"></span> <small>CSC</small>
+                        <br> <br>
+                        Third Year Computer Science Major / Transfer Student / Secretary
+                        <br> <br>
+                        As the secretary of Color Coded, my main responsibilities include keeping accurate records of
+                        meetings, coordinating with other members to plan events, and communicating important
+                        information to all members.
+                        </p>
+                      </div>
+                      <!-- <nav class="level is-mobile">
+                        <div class="level-left">
+                          <a class="level-item" aria-label="reply">
+                            <span class="icon is-large">
+                              <i class="fab fa-2x fa-github" aria-hidden="true"></i>
+                            </span>
+                          </a>
+
+                          <a class="level-item" aria-label="retweet">
+                            <span class="icon is-large">
+                              <i class="fab fa-2x fa-linkedin" aria-hidden="true"></i>
+                            </span>
+                          </a>
+
+                        </div>
+                      </nav> -->
+                    </div>
+                  </article>
+                </div>
+
+
+                <!-- Tech Officer -->
+                <div class="box">
+                  <article class="media">
+                    <div class="media-left">
+                      <figure class="image is-128x128">
+                        <img src="../assets/CClogo2.png" alt="Image">
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <div class="content is-medium">
+                        <p>
+                        <h2>David Hernandez</h2> <br>
+                        <medium>Webmaster</medium> <span class="tab"></span> <small>CSC</small>
+                        <br><br>
+                        As Webmaster of Color Coded I work to maintain and update our website and outreach information,
+                        despite the challenges that may arise.
+                        <br> <br>
+                        As a member of Color Coded's board, I hope to make sure that everyone is welcome at Color Coded!
+                        <br> <br>
+                        As a tutor for Color Coded, I hope to be able to help anyone who comes through our doors!
+                        </p>
+                      </div>
+                      <!-- <nav class="level is-mobile">
+                        <div class="level-left">
+                          <a class="level-item" aria-label="reply">
+                            <span class="icon is-large">
+                              <i class="fab fa-2x fa-github" aria-hidden="true"></i>
+                            </span>
+                          </a>
+
+                          <a class="level-item" aria-label="retweet">
+                            <span class="icon is-large">
+                              <i class="fab fa-2x fa-linkedin" aria-hidden="true"></i>
+                            </span>
+                          </a>
+
+                        </div>
+                      </nav> -->
+                    </div>
+                  </article>
+                </div>
+
+                <!-- Diversity Officer -->
+                <div class="box">
+                  <article class="media">
+                    <div class="media-left">
+                      <figure class="image is-128x128">
+                        <img src="../assets/CClogo2.png" alt="Image">
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <div class="content is-medium">
+                        <p>
+                        <h2>Shiv Panchal</h2> <br>
+                        <medium>Diversity Officer</medium> <span class="tab"></span> <small>SE</small>
+                        <br> <br>
+                        Third Year Software Engineering Major / Transfer Student / Diversity Chair
+                        <br> <br>
+                        As a diversity chair of Color Coded, I am responsible for identifying individuals belonging to
+                        minority groups or having diverse backgrounds within the local community who may express
+                        interest in becoming a part of the group.
+
+
+                        </p>
+                      </div>
+                      <!-- <nav class="level is-mobile">
+                        <div class="level-left">
+                          <a class="level-item" aria-label="reply">
+                            <span class="icon is-large">
+                              <i class="fab fa-2x fa-github" aria-hidden="true"></i>
+                            </span>
+                          </a>
+
+                          <a class="level-item" aria-label="retweet">
+                            <span class="icon is-large">
+                              <i class="fab fa-2x fa-linkedin" aria-hidden="true"></i>
+                            </span>
+                          </a>
+
+                        </div>
+                      </nav> -->
+                    </div>
+                  </article>
+                </div>
+
+                <!-- Club Chair -->
+                <div class="box">
+                  <article class="media">
+                    <div class="media-left">
+                      <figure class="image is-128x128">
+                        <img src="../assets/CClogo2.png" alt="Image">
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <div class="content is-medium">
+                        <p>
+                        <h2>Reza Mousakhani</h2> <br>
+                        <medium>Club Chair</medium> <span class="tab"></span> <small>SE</small>
+                        <br> <br>
+                        Welcome!
+                        </p>
+                      </div>
+                      <!-- <nav class="level is-mobile">
+                        <div class="level-left">
+                          <a class="level-item" aria-label="reply">
+                            <span class="icon is-large">
+                              <i class="fab fa-2x fa-github" aria-hidden="true"></i>
+                            </span>
+                          </a>
+
+                          <a class="level-item" aria-label="retweet">
+                            <span class="icon is-large">
+                              <i class="fab fa-2x fa-linkedin" aria-hidden="true"></i>
+                            </span>
+                          </a>
+
+                        </div>
+                      </nav> -->
+                    </div>
+                  </article>
+                </div>
+
+                <!-- Other -->
+                <div class="box">
+                  <article class="media">
+                    <div class="media-left">
+                      <figure class="image is-128x128">
+                        <img src="../assets/Samantha_Soto.jpeg" alt="Image">
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <div class="content is-medium">
+                        <p>
+                        <h2>Samantha Soto Alejos</h2> <br>
+                        <medium>Vice President</medium> <span class="tab"></span> <small>LAES</small>
+                        <br> <br>
+                        Computer Science 2024 switching to LAES
+                        <br> <br>
+                        As communications officer, I am responsible for distributing weekly newsletters, communicating
+                        upcoming events with the CS department, and reviving Color Coded’s social media presence to
+                        invite more members.
+                        </p>
+                      </div>
+                      <!-- <nav class="level is-mobile">
+                        <div class="level-left">
+                          <a class="level-item" aria-label="reply">
+                            <span class="icon is-large">
+                              <i class="fab fa-2x fa-github" aria-hidden="true"></i>
+                            </span>
+                          </a>
+
+                          <a class="level-item" aria-label="retweet">
+                            <span class="icon is-large">
+                              <i class="fab fa-2x fa-linkedin" aria-hidden="true"></i>
+                            </span>
+                          </a>
+
+                        </div>
+                      </nav> -->
+                    </div>
+                  </article>
+                </div>
+
+                <!-- Advisor (s) -->
+                <div class="box">
+                  <article class="media">
+                    <div class="media-left">
+                      <figure class="image is-128x128">
+                        <img src="../assets/foaad.jpg" alt="Image">
+                      </figure>
+                    </div>
+                    <div class="media-content">
+                      <div class="content is-medium">
+                        <p>
+                        <h2>Foaad Khosmood</h2> <br>
+                        <medium>Faculty Advisor</medium> <span class="tab"></span> <small>CS</small>
+                        <br> <br>
+                        A beacon of knowledge!
+                        </p>
+                      </div>
+                      <!-- <nav class="level is-mobile">
+                        <div class="level-left">
+                          <a class="level-item" aria-label="reply">
+                            <span class="icon is-large">
+                              <i class="fab fa-2x fa-github" aria-hidden="true"></i>
+                            </span>
+                          </a>
+
+                          <a class="level-item" aria-label="retweet">
+                            <span class="icon is-large">
+                              <i class="fab fa-2x fa-linkedin" aria-hidden="true"></i>
+                            </span>
+                          </a>
+
+                        </div>
+                      </nav> -->
+                    </div>
+                  </article>
+                </div>
 
 
 
-    <body>
+
+              </div>
+              <!-- <div class="column" style="text-align:right;">
+                                <h1 class="subtitle has-text-lightgrey is-4">Thursdays, Building 14 - 257 </h1>
+                                <h1 class="subtitle has-text-lightgrey is-4">11am - 12pm </h1>
+                            </div> -->
+
+            </div>
+          </div>
+
+
+
+        </div>
+    </section>
+  </div>
+
+
+
+  <body>
