@@ -193,23 +193,24 @@
   </style>
 </head>
 
+
+
 <body>
   <!-- Navbar / Header -->
   <div class="block">
+
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
       <!-- brand / logo (always visible on both mobile <1024px and desktop >=1024px) -->
       <div class="navbar-brand">
         <a href="/" class="navbar-item">
-          <!-- <h1 class="title">Color Coded: Diversity in Tech</h1> -->
           <a class="navbar-brand" href="#">
             <img src="./assets/CClogo2 2.png" alt="Logo" style="width: 280px" style="margin:0px 100px">
           </a>
         </a>
 
-
         <a href="https://github.com/colorcoded/" class="navbar-item">
           <span class="icon">
-            <i id="github-icon" class="fab fda-2x fa-github"></i>
+            <i id="github-icon" class="fab fa-2x fa-github"></i>
           </span>
         </a>
 
@@ -221,8 +222,7 @@
 
         <a href="https://discord.gg/dhaNwnvD" class="navbar-item">
           <span class="icon">
-            <i class="fab fa-2x fa-discord"></i>
-        
+            <i id="discord-icon" class="fab fa-2x fa-discord"></i>
           </span>
         </a>
 
@@ -260,6 +260,9 @@
       </div>
     </nav>
   </div>
+
+
+
   <!-- Big message and big picture -->
   <div class="block">
     <section class="hero is-primary is-fullheight fixed-bg-image">
@@ -282,6 +285,8 @@
         </div>
     </section>
   </div>
+
+
   <!-- Mission Statement -->
   <div class="block" id="vision">
     <div class="hero is-warning">
@@ -463,14 +468,24 @@
         var w = document.body.clientWidth;
         if (w < 400) {
           const gh = document.getElementById('github-icon');
-          const fb = document.getElementById('facebook-icon');
+          const sl = document.getElementById('facebook-icon');
+          const ds = document.getElementById('discord-icon');
+          console.log(gh.classList);
+          console.log(sl.classList);
+          console.log(ds.classList);
           gh.classList.remove('fa-2x');
-          fb.classList.remove('fa-2x');
+          sl.classList.remove('fa-2x');
+          ds.classList.remove('fa-2x');
         } else if (w >= 401) {
           const gh = document.getElementById('github-icon');
-          const fb = document.getElementById('facebook-icon');
+          const sl = document.getElementById('facebook-icon');
+          const ds = document.getElementById('discord-icon');
+          console.log(gh.classList);
+          console.log(sl.classList);
+          console.log(ds.classList);
           gh.classList.add('fa-2x');
-          fb.classList.add('fa-2x');
+          sl.classList.add('fa-2x');
+          ds.classList.add('fa-2x');
         };
       };
       window.addEventListener('resize', modifyClass);
@@ -505,7 +520,7 @@
     });
 
   </script>
-  <script>
+  <!-- <script>
     var slideIndex = 1;
     showSlides(slideIndex);
 
@@ -538,7 +553,7 @@
         document.getElementById('events_title').innerHTML = "Past Events"
       }
     }
-  </script>
+  </script> -->
 </footer>
 
 </html>
