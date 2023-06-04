@@ -214,9 +214,9 @@
           </span>
         </a>
 
-        <a href=" https://join.slack.com/t/color-coded-workspace/signup" class="navbar-item">
+        <a href="https://instagram.com/colorcodedslo" class="navbar-item">
           <span class="icon">
-            <i id="slack-icon" class="fab fa-2x fa-slack"></i>
+            <i id="instagram-icon" class="fab fa-2x fa-instagram"></i>
           </span>
         </a>
 
@@ -355,7 +355,7 @@
         var w = document.body.clientWidth;
         if (w < 400) {
           const gh = document.getElementById('github-icon');
-          const sl = document.getElementById('slack-icon');
+          const sl = document.getElementById('instagram-icon');
           const ds = document.getElementById('discord-icon');
           console.log(gh.classList);
           console.log(sl.classList);
@@ -365,7 +365,7 @@
           // ds.classList.remove('fa-2x');
         } else if (w >= 401) {
           const gh = document.getElementById('github-icon');
-          const sl = document.getElementById('slack-icon');
+          const sl = document.getElementById('instagram-icon');
           const ds = document.getElementById('discord-icon');
           console.log(gh.classList);
           console.log(sl.classList);
@@ -407,40 +407,7 @@
     });
 
   </script>
-  <!-- <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
 
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-      if (slideIndex == 1) {
-        document.getElementById('events_title').innerHTML = "Past Events"
-      }
-      else {
-        document.getElementById('events_title').innerHTML = "Past Events"
-      }
-    }
-  </script> -->
 </footer>
 
 </html>
