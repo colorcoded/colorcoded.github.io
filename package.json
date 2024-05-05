@@ -12,9 +12,7 @@
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write .",
     "test:integration": "playwright test",
-    "test:unit": "vitest",
-    "deploy": "pnpm build && pnpx gh-pages -d build -t true"
-
+    "test:unit": "vitest"
   },
   "devDependencies": {
     "@playwright/test": "^1.28.1",
