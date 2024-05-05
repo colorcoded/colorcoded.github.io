@@ -25,6 +25,7 @@
 	// LightSwitch
 	import { LightSwitch } from '@skeletonlabs/skeleton';
 
+	export const prerender = true;
 
 </script>
 
