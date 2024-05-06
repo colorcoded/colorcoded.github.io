@@ -43,7 +43,7 @@
 
 
 
-    <!-- Tresurer -->
+    <!-- Treasurer -->
     <div class="card max-w-sm rounded overflow-hidden shadow-lg p-4 center">
         <header class="card-header card-container">
             <img src="/officers/david.jpeg" alt="Headshot of David" class='center'>
@@ -55,7 +55,7 @@
             </p>
         </section>
 
-        <footer class="card-footer">Tresurer</footer>
+        <footer class="card-footer">Treasurer</footer>
     </div>
 
 
