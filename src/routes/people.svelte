@@ -15,7 +15,7 @@
     <!-- President -->
     <div class="card max-w-sm rounded overflow-hidden shadow-lg p-4 center">
         <header class="card-header card-container">
-            <img src="/officers/anthonyColin2.png" alt="Headshot of Anthony" class='center'>
+            <img src="/officers/anthonyColin.png" alt="Headshot of Anthony" class='center'>
         </header>
 
         <section class="p-4">
@@ -46,7 +46,7 @@
     <!-- Tresurer -->
     <div class="card max-w-sm rounded overflow-hidden shadow-lg p-4 center">
         <header class="card-header card-container">
-            <img src="/officers/david.jpg" alt="Headshot of David" class='center'>
+            <img src="/officers/david.jpeg" alt="Headshot of David" class='center'>
         </header>
 
         <section class="p-4">
@@ -62,7 +62,7 @@
     <!-- Luke -->
     <div class="card max-w-sm rounded overflow-hidden shadow-lg p-s4 center">
         <header class="card-header card-container">
-            <img src="/officers/LukeFanguna.png" alt="Headshot of Luke" class='center'>
+            <img src="/officers/Luke_Fanguna.png" alt="Headshot of Luke" class='center'>
         </header>
 
         <section class="p-4">
