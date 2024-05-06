@@ -20,7 +20,7 @@
 
         <section class="p-4">
             <p class='p-4'> 
-                Anthony Colin who lives Mustang Village, is a 4th year Computer Science major. 
+                Anthony Colin is a 4th year Computer Science major. 
                 He is the President of the club and is responsible for overseeing the club and making sure everything runs smoothly. 
                 He is also responsible for making sure the club is running smoothly and that the club is meeting the needs of the members.
             </p>
@@ -37,10 +37,7 @@
 
         <section class="p-4">
             <p class='p-4'> 
-                Anthony Colin who lives Mustang Village, is a 4th year Computer Science major. 
-                He is the President of the club and is responsible for overseeing the club and making sure everything runs smoothly. 
-                He is also responsible for making sure the club is running smoothly and that the club is meeting the needs of the members.
-            </p>
+                Ivan Martinez
         </section>
 
         <footer class="card-footer">Footer 1</footer>
@@ -56,9 +53,7 @@
 
         <section class="p-4">
             <p class='p-4'> 
-                Anthony Colin who lives Mustang Village, is a 4th year Computer Science major. 
-                He is the President of the club and is responsible for overseeing the club and making sure everything runs smoothly. 
-                He is also responsible for making sure the club is running smoothly and that the club is meeting the needs of the members.
+                David Hernandez
             </p>
         </section>
 
@@ -74,9 +69,7 @@
 
         <section class="p-4">
             <p class='p-4'> 
-                Anthony Colin who lives Mustang Village, is a 4th year Computer Science major. 
-                He is the President of the club and is responsible for overseeing the club and making sure everything runs smoothly. 
-                He is also responsible for making sure the club is running smoothly and that the club is meeting the needs of the members.
+                Luke Fanguna
             </p>
         </section>
 
@@ -92,9 +85,7 @@
 
         <section class="p-4">
             <p class='p-4'> 
-                Anthony Colin who lives Mustang Village, is a 4th year Computer Science major. 
-                He is the President of the club and is responsible for overseeing the club and making sure everything runs smoothly. 
-                He is also responsible for making sure the club is running smoothly and that the club is meeting the needs of the members.
+                Sam Soto
             </p>
         </section>
 
