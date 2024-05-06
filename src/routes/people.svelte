@@ -20,9 +20,7 @@
 
         <section class="p-4">
             <p class='p-4'> 
-                Anthony Colin is a 4th year Computer Science major. 
-                He is the President of the club and is responsible for overseeing the club and making sure everything runs smoothly. 
-                He is also responsible for making sure the club is running smoothly and that the club is meeting the needs of the members.
+                Anthony Colin
             </p>
         </section>
 
@@ -62,9 +60,9 @@
 
 
     <!-- Luke -->
-    <div class="card max-w-sm rounded overflow-hidden shadow-lg p-4 center">
+    <div class="card max-w-sm rounded overflow-hidden shadow-lg p-s4 center">
         <header class="card-header card-container">
-            <img src="/officers/luke2.png" alt="Headshot of Luke" class='center'>
+            <img src="/officers/LukeFanguna.png" alt="Headshot of Luke" class='center'>
         </header>
 
         <section class="p-4">
@@ -80,12 +78,12 @@
     <!-- Sam -->
     <div class="card max-w-sm rounded overflow-hidden shadow-lg p-4 center">
         <header class="card-header card-container">
-            <img src="/officers/Samantha_Soto.jpeg" alt="Headshot of Ivan" class='center'>
+            <img src="/officers/Samantha_Soto.jpeg" alt="Headshot of Samantha" class='center'>
         </header>
 
         <section class="p-4">
             <p class='p-4'> 
-                Sam Soto
+                Samantha Soto
             </p>
         </section>
 
