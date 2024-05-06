@@ -15,7 +15,7 @@
     <!-- President -->
     <div class="card max-w-sm rounded overflow-hidden shadow-lg p-4 center">
         <header class="card-header card-container">
-            <img src="/officers/anthonyColin.jpeg" alt="Headshot of Anthony" class='center'>
+            <img src="/officers/anthonyColin2.jpeg" alt="Headshot of Anthony" class='center'>
         </header>
 
         <section class="p-4">

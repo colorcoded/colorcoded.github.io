@@ -48,14 +48,14 @@
 				>
 					Discord
 				</a>
-				<a
+				<!-- <a
 					class="btn btn-sm variant-ghost-surface"
 					href="https://giving.calpoly.edu/"
 					target="_blank"
 					rel="noreferrer"
 				>
 					Donate
-				</a>
+				</a> -->
 				<a
 					class="btn btn-sm variant-ghost-surface"
 					href="https://github.com/calpoly-colorcoded"
