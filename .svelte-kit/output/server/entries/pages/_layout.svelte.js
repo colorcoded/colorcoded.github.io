@@ -208,7 +208,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     header: () => {
       return ` ${validate_component(AppBar, "AppBar").$$render($$result, {}, {}, {
         trail: () => {
-          return `<a class="btn btn-sm variant-ghost-surface" href="https://discord.gg/EXqV7W8MtY" target="_blank" rel="noreferrer" data-svelte-h="svelte-4wjuuv">Discord</a> <a class="btn btn-sm variant-ghost-surface" href="https://twitter.com/SkeletonUI" target="_blank" rel="noreferrer" data-svelte-h="svelte-nfhuvj">Donate</a> <a class="btn btn-sm variant-ghost-surface" href="https://github.com/skeletonlabs/skeleton" target="_blank" rel="noreferrer" data-svelte-h="svelte-yebxv7">GitHub</a> `;
+          return `<a class="btn btn-sm variant-ghost-surface" href="https://discord.gg/thXfHzq6" target="_blank" rel="noreferrer" data-svelte-h="svelte-79ug2a">Discord</a> <a class="btn btn-sm variant-ghost-surface" href="https://giving.calpoly.edu/" target="_blank" rel="noreferrer" data-svelte-h="svelte-14pfvfk">Donate</a> <a class="btn btn-sm variant-ghost-surface" href="https://github.com/calpoly-colorcoded" target="_blank" rel="noreferrer" data-svelte-h="svelte-16pogql">GitHub</a> `;
         },
         lead: () => {
           return `<strong class="text-xl" data-svelte-h="svelte-10wplrb">ColorCoded</strong>`;

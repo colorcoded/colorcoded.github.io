@@ -24,7 +24,7 @@
             </p>
         </section>
 
-        <footer class="card-footer">Footer 1</footer>
+        <footer class="card-footer">President</footer>
     </div>
 
     <!-- Vice President -->
@@ -38,7 +38,7 @@
                 Ivan Martinez
         </section>
 
-        <footer class="card-footer">Footer 1</footer>
+        <footer class="card-footer">Vice-President</footer>
     </div>
 
 
@@ -55,7 +55,7 @@
             </p>
         </section>
 
-        <footer class="card-footer">Footer 1</footer>
+        <footer class="card-footer">Tresurer</footer>
     </div>
 
 
@@ -71,7 +71,9 @@
             </p>
         </section>
 
-        <footer class="card-footer">Footer 1</footer>
+        <footer class="card-footer">
+            Secretary
+        </footer>
     </div>
 
 
@@ -87,7 +89,7 @@
             </p>
         </section>
 
-        <footer class="card-footer">Footer 1</footer>
+        <footer class="card-footer">Communications and Outreach Officer</footer>
     </div>
 
 
