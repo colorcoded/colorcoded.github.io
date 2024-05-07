@@ -1,5 +1,5 @@
 <h3 class="h3">
-    <span class="bg-gradient-to-br from-green-500 to-yellow-500 bg-clip-text text-transparent box-decoration-clone"> Check out our Newsletter! </span>
+    <span class="bg-gradient-to-br from-green-500 to-yellow-500 bg-clip-text text-transparent box-decoration-clone"> Check out our newsletter! </span>
 </h3>
 <br>
 <br>

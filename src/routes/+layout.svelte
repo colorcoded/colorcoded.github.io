@@ -37,7 +37,7 @@
 		<!-- App Bar -->
 		<AppBar>
 			<svelte:fragment slot="lead">
-				<strong class="text-xl">ColorCoded</strong>
+				<strong class="text-xl">Color Coded</strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<a

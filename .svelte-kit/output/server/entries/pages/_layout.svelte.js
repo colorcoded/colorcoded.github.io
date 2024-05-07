@@ -211,7 +211,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
           return `<a class="btn btn-sm variant-ghost-surface" href="https://discord.gg/thXfHzq6" target="_blank" rel="noreferrer" data-svelte-h="svelte-79ug2a">Discord</a>  <a class="btn btn-sm variant-ghost-surface" href="https://github.com/calpoly-colorcoded" target="_blank" rel="noreferrer" data-svelte-h="svelte-16pogql">GitHub</a> `;
         },
         lead: () => {
-          return `<strong class="text-xl" data-svelte-h="svelte-10wplrb">ColorCoded</strong>`;
+          return `<strong class="text-xl" data-svelte-h="svelte-2ttm4f">Color Coded</strong>`;
         }
       })} `;
     },

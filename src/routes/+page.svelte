@@ -18,15 +18,22 @@
 	<div class="space-y-10 text-center flex flex-col items-center">
 
 
+		<h1 class="h1">
+			<span class="bg-gradient-to-br from-emerald-700 to-amber-300 bg-clip-text text-transparent box-decoration-clone">
+				Color Coded @ Cal Poly SLO
+			</span>
+		</h1>
+		<h2 class="h2">
+			<span class="bg-gradient-to-br from-amber-500 to-yellow-500 bg-clip-text text-transparent box-decoration-clone">
+				A ColorStack Chapter
+			</span>
+		</h2>
+
+
 		<!-- Animated Logo -->
 		<figure>
+			<br>
 			<section class="img-bg" />
-			<h1 class="h1">
-				<span class="bg-gradient-to-br from-emerald-700 to-amber-300 bg-clip-text text-transparent box-decoration-clone">ColorCoded.</span>
-			</h1>
-			<h3 class="h3">
-				<span class="bg-gradient-to-br from-amber-500 to-yellow-500 bg-clip-text text-transparent box-decoration-clone">By ColorStack.</span>
-			</h3>
 			
 			<div class="space-y-10 text-center flex flex-col items-center">
 				<Logo  />
@@ -103,6 +110,7 @@
 		@apply absolute z-[-1] rounded-full blur-[50px] transition-all;
 		animation: pulse 5s cubic-bezier(0, 0, 0, 0.5) infinite,
 			glow 5s linear infinite;
+		align-self: center;
 	}
 
 	@keyframes glow {
