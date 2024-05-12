@@ -15,7 +15,7 @@
     <!-- President -->
     <div class="card max-w-sm rounded overflow-hidden shadow-lg p-4 center">
         <header class="card-header card-container">
-            <img src="/officers/anthonyColin2.jpeg" alt="Headshot of Anthony" class='center'>
+            <img src="/officers/anthonyColin.webp" alt="Headshot of Anthony" class='center'>
         </header>
 
         <section class="p-4">
@@ -30,7 +30,7 @@
     <!-- Vice President -->
     <div class="card max-w-sm rounded overflow-hidden shadow-lg p-4 center">
         <header class="card-header card-container">
-            <img src="/officers/IvanMartinez.jpeg" alt="Headshot of Ivan" class='center'>
+            <img src="/officers/ivanMartinez.webp" alt="Headshot of Ivan" class='center'>
         </header>
 
         <section class="p-4">
@@ -46,7 +46,7 @@
     <!-- Treasurer -->
     <div class="card max-w-sm rounded overflow-hidden shadow-lg p-4 center">
         <header class="card-header card-container">
-            <img src="/officers/david.jpeg" alt="Headshot of David" class='center'>
+            <img src="/officers/david.webp" alt="Headshot of David" class='center'>
         </header>
 
         <section class="p-4">
@@ -62,7 +62,7 @@
     <!-- Luke -->
     <div class="card max-w-sm rounded overflow-hidden shadow-lg p-s4 center">
         <header class="card-header card-container">
-            <img src="/officers/Luke_Fanguna.png" alt="Headshot of Luke" class='center'>
+            <img src="/officers/lukeFanguna.webp" alt="Headshot of Luke" class='center'>
         </header>
 
         <section class="p-4">
@@ -80,7 +80,7 @@
     <!-- Sam -->
     <div class="card max-w-sm rounded overflow-hidden shadow-lg p-4 center">
         <header class="card-header card-container">
-            <img src="/officers/Samantha_Soto.jpeg" alt="Headshot of Samantha" class='center'>
+            <img src="/officers/samanthaSoto.webp" alt="Headshot of Samantha" class='center'>
         </header>
 
         <section class="p-4">
