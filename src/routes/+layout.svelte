@@ -24,11 +24,14 @@
 
 	// LightSwitch
 	import { LightSwitch } from '@skeletonlabs/skeleton';
+	import { autoModeWatcher } from '@skeletonlabs/skeleton';
 
 	export const prerender = true;
 
 </script>
 
+
+<svelte:head>{@html '<script>(' + autoModeWatcher.toString() + ')();</script>'}</svelte:head>
 
 
 <!-- App Shell -->

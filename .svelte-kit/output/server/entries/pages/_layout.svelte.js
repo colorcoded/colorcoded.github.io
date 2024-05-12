@@ -1,6 +1,6 @@
 import { c as create_ssr_component, e as escape, a as add_attribute, b as compute_slots, d as add_styles, f as subscribe, v as validate_component } from "../../chunks/ssr.js";
 import { w as writable } from "../../chunks/index.js";
-import { m as modeCurrent, s as setInitialClassState } from "../../chunks/ProgressBar.svelte_svelte_type_style_lang.js";
+import { m as modeCurrent, s as setInitialClassState, a as autoModeWatcher } from "../../chunks/ProgressBar.svelte_svelte_type_style_lang.js";
 import hljs from "highlight.js/lib/core";
 import xml from "highlight.js/lib/languages/xml";
 import css from "highlight.js/lib/languages/css";
@@ -197,7 +197,7 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const prerender = true;
   if ($$props.prerender === void 0 && $$bindings.prerender && prerender !== void 0)
     $$bindings.prerender(prerender);
-  return ` ${validate_component(AppShell, "AppShell").$$render($$result, {}, {}, {
+  return `${$$result.head += `<!-- HEAD_svelte-13st50g_START --><!-- HTML_TAG_START -->${"<script>(" + autoModeWatcher.toString() + ")();<\/script>"}<!-- HTML_TAG_END --><!-- HEAD_svelte-13st50g_END -->`, ""}  ${validate_component(AppShell, "AppShell").$$render($$result, {}, {}, {
     pageFooter: () => {
       return ` ${validate_component(AppBar, "AppBar").$$render($$result, {}, {}, {
         default: () => {

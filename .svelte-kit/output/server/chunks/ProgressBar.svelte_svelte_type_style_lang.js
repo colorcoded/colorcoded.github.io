@@ -35,12 +35,25 @@ function setInitialClassState() {
     elemHtmlClasses.remove("dark");
   }
 }
+function autoModeWatcher() {
+  const mql = window.matchMedia("(prefers-color-scheme: light)");
+  function setMode(value) {
+    const elemHtmlClasses = document.documentElement.classList;
+    const classDark = `dark`;
+    value === true ? elemHtmlClasses.remove(classDark) : elemHtmlClasses.add(classDark);
+  }
+  setMode(mql.matches);
+  mql.onchange = () => {
+    setMode(mql.matches);
+  };
+}
 function prefersReducedMotion() {
   return false;
 }
 readable(prefersReducedMotion(), (set) => {
 });
 export {
+  autoModeWatcher as a,
   modeCurrent as m,
   setInitialClassState as s
 };

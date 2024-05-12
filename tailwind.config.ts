@@ -6,7 +6,7 @@ import { skeleton } from '@skeletonlabs/tw-plugin';
 import { ColorStack_CalPoly } from './src/ColorStack_CalPoly'
 
 export default {
-	darkMode: 'class',
+	darkMode: 'media',
 	content: ['./src/**/*.{html,js,svelte,ts}', join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')],
 	theme: {
 		extend: {},
