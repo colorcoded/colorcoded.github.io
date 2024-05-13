@@ -72,6 +72,8 @@
 	</svelte:fragment>
 	<!-- Page Route Content -->
 	<slot />
+
+	<!-- Page Footer -->
 	<svelte:fragment slot="pageFooter">
 		<AppBar>
 			<LightSwitch/>

@@ -63,6 +63,8 @@
                     <!-- Events commented out -->
                 {:else if tabSet === 2}
                     <People />
+					<br/>
+					<br/>
                 {:else if tabSet === 3}
                     <Newsletter />
                 {/if}
