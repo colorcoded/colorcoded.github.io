@@ -3,7 +3,7 @@ name: Deploy React App to GitHub Pages
 on:
   push:
     branches:
-      - gh-pages # or the branch you want to deploy from
+      - react_test # or the branch you want to deploy from
 
 jobs:
   deploy:
