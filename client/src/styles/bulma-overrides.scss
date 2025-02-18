@@ -1,0 +1,163 @@
+$custom-green: #164734;
+$custom-light-green: #23815A;
+
+
+@use "bulma/sass" with (
+    $family-primary: '"Nunito", sans-serif',
+    $primary: $custom-green,
+    $navbar-burger-color: $custom-green,
+    $success: $custom-light-green,
+    $navbar-item-img-max-height: 2rem,
+);
+
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700"); 
+
+
+// Navbar Edits
+$team-hover-bg: rgba(lighten(#F7B70C, 20%), 0.3); // Add opacity
+$events-hover-bg: rgba(lighten(#F468A5, 20%), 0.3); // Add opacity
+$contact-hover-bg: rgba(lighten(#2691cb, 20%), 0.3); // Add opacity
+$light-mode-hover-bg: rgba(lighten(#efbf04, 20%), 0.3); // Yellow with opacity
+$dark-mode-hover-bg: rgba(lighten(#9867c5, 20%), 0.3); // Purple with opacity
+$discord-hover-bg: rgba(lighten(#7289DA, 20%), 0.3); // Purple with opacity
+$instagram-hover-bg: rgba(lighten(#E1306C, 20%), 0.3); // Purple with opacity
+
+
+.navbar-item {
+  border-radius: 3px; // Keep consistent border radius for all items
+
+  transition: background-color 0.3s ease;
+  // Hover effect
+  &:hover {
+    
+    &.team-item {
+      background-color: $team-hover-bg;
+    }
+
+    &.events-item {
+      background-color: $events-hover-bg;
+    }
+
+    &.contact-item {
+      background-color: $contact-hover-bg;
+    }
+
+    &.light-mode-item {
+        background-color: $light-mode-hover-bg;
+      }
+
+    &.discord-item {
+    background-color: $discord-hover-bg;
+    }
+    
+    &.instagram-item {
+      background-color: $instagram-hover-bg;
+      }
+  }
+}
+
+[data-theme="dark"] {
+    .navbar-menu {
+      color: white; // Text becomes white
+    }
+  
+    .navbar-item {
+      color: white; // Ensure all items are white
+    }
+  }
+
+.navbar {
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+
+    img {
+      max-height: 3rem;
+    }
+  }
+
+  .navbar-menu {
+    flex-direction: column; // Default for mobile
+    width: auto;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--bulma-black);
+    border-color: var(--bulma-border);
+    border-radius: 1em;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: var(--bulma-shadow);
+    padding: 1em;
+    position: absolute;
+    right: 2rem;
+    top: 4.5rem;
+    transform-origin: right top;
+    transition-duration: var(--bulma-duration);
+    transition-property: opacity, transform;
+    visibility: hidden;
+    z-index: 5;
+    
+    
+    @media screen and (min-width: 1024px) {
+      flex-direction: row; // Switch to horizontal layout for desktop
+      align-items: center;
+      justify-content: flex-start;
+      position: static; // Prevent it from being absolute
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      background-color: transparent;
+      visibility: visible;
+    }
+  }
+
+  .navbar-menu.is-active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+    visibility: visible;
+  }
+
+  .navbar-item {
+    display: flex;
+    align-items: center; /* Align icon and text vertically */
+
+
+    @media screen and (min-width: 1024px) {
+      padding: 1rem 1rem; // Adjust padding for desktop
+    }
+  }
+
+  .navbar-end {
+    display: flex;
+    flex-direction: row; // Ensure horizontal layout
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+
+    @media screen and (max-width: 1023px) {
+      flex-direction: column; // Switch to column for mobile
+      align-items: flex-start;
+
+    }
+  }
+}
+
+  // Events Calendar
+.google-calendar-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.google-calendar-iframe {
+  width: 100%;
+  min-width: 300px;
+  height: 600px;
+  border: 0;
+}
