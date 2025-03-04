@@ -60,14 +60,14 @@ const Navbar = () => {
         <div className={`navbar-menu ${isActive ? "is-active" : ""}`} id="navbar-menu">        
           <div className="navbar-start">
             <Link className="navbar-item team-item" to="/team">
-              <FontAwesomeIcon icon={faUserGroup} className="mr-2" style={{ color: "#F7B70C" }} />Team
+              <FontAwesomeIcon icon={faUserGroup} className="mr-0" style={{ color: "#F7B70C" }} />Team
             </Link>
             <Link className="navbar-item events-item" to="/events">
-              <FontAwesomeIcon icon={faCalendar} className="mr-2" style={{ color: "#F468A5" }} />
+              <FontAwesomeIcon icon={faCalendar} className="mr-0" style={{ color: "#F468A5" }} />
               Events
             </Link>
             <Link className="navbar-item contact-item" to="/contact">
-              <FontAwesomeIcon icon={faEnvelope} className="mr-2" style={{ color: "#2691cb" }}/>
+              <FontAwesomeIcon icon={faEnvelope} className="mr-0" style={{ color: "#2691cb" }}/>
               Contact
             </Link>
         </div>
@@ -76,7 +76,7 @@ const Navbar = () => {
           {/* Social Media Icons */}
           <div className="navbar-item">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/colorcodedslo/"
               target="_blank"
               rel="noopener noreferrer"
               className="navbar-item instagram-item"
@@ -85,7 +85,7 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faInstagram} style={{ color: "#E1306C" }} />
             </a>
             <a
-              href="https://discord.com"
+              href="https://discord.gg/WaCy9habtt"
               target="_blank"
               rel="noopener noreferrer"
               className="navbar-item discord-item"

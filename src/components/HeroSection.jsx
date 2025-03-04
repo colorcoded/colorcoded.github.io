@@ -4,6 +4,8 @@ const HeroSection = () => {
     const images = [
         "/hero-images/hero1.jpg",
         "/hero-images/hero2.jpg",
+        "/hero-images/hero3.jpg",
+        "/hero-images/hero4.jpg",
       ];
       const [currentImageIndex, setCurrentImageIndex] = useState(0);
     
@@ -28,7 +30,9 @@ const HeroSection = () => {
                     </p>
                     <div className="level-left">
                         <div className="level-item has-text-centered">
-                            <button className="button is-warning is-link is-medium has-text-black-bis has-text-weight-semibold">
+                            <button 
+                            className="button is-warning is-link is-medium has-text-black-bis has-text-weight-semibold"
+                            onClick={()=>window.open("https://colorstack.org", "_blank")}>
                             Membership
                             </button>
                         </div>
