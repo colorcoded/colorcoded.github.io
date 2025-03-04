@@ -66,10 +66,10 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faCalendar} className="mr-0" style={{ color: "#F468A5" }} />
               Events
             </Link>
-            <Link className="navbar-item contact-item" to="/contact">
+            {/* <Link className="navbar-item contact-item" to="/contact">
               <FontAwesomeIcon icon={faEnvelope} className="mr-0" style={{ color: "#2691cb" }}/>
               Contact
-            </Link>
+            </Link> */}
         </div>
 
         <div className="navbar-end">
