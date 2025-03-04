@@ -1,7 +1,6 @@
 $custom-green: #164734;
 $custom-light-green: #23815A;
 
-
 @use "bulma/sass" with (
     $family-primary: '"Nunito", sans-serif',
     $primary: $custom-green,
@@ -12,7 +11,6 @@ $custom-light-green: #23815A;
 
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700"); 
 
-
 // Navbar Edits
 $team-hover-bg: rgba(lighten(#F7B70C, 20%), 0.3); // Add opacity
 $events-hover-bg: rgba(lighten(#F468A5, 20%), 0.3); // Add opacity
@@ -22,13 +20,12 @@ $dark-mode-hover-bg: rgba(lighten(#9867c5, 20%), 0.3); // Purple with opacity
 $discord-hover-bg: rgba(lighten(#7289DA, 20%), 0.3); // Purple with opacity
 $instagram-hover-bg: rgba(lighten(#E1306C, 20%), 0.3); // Purple with opacity
 
-
 .navbar-item {
   border-radius: 3px; // Keep consistent border radius for all items
+  transition: all 0.3s ease-in-out;
 
-  transition: background-color 0.3s ease;
   // Hover effect
-  &:hover {
+  &:hover {    
     
     &.team-item {
       background-color: $team-hover-bg;
@@ -42,17 +39,25 @@ $instagram-hover-bg: rgba(lighten(#E1306C, 20%), 0.3); // Purple with opacity
       background-color: $contact-hover-bg;
     }
 
-    &.light-mode-item {
-        background-color: $light-mode-hover-bg;
-      }
-
     &.discord-item {
-    background-color: $discord-hover-bg;
+      background-color: $discord-hover-bg;
+      transform: translateY(-10px);
     }
     
     &.instagram-item {
       background-color: $instagram-hover-bg;
-      }
+      transform: translateY(-10px);
+    }
+    
+    &.light-mode-item {
+        background-color: $light-mode-hover-bg;
+        transform: translateY(-10px);
+    }
+    
+    &.dark-mode-item {
+      background-color: $dark-mode-hover-bg;
+      transform: translateY(-10px);
+    }
   }
 }
 
@@ -160,4 +165,12 @@ $instagram-hover-bg: rgba(lighten(#E1306C, 20%), 0.3); // Purple with opacity
   min-width: 300px;
   height: 600px;
   border: 0;
+}
+
+.button.is-warning {
+  transition: all 0.3s ease-in-out;
+}
+
+.button.is-warning:hover {
+  transform : translateY(-10px);
 }
