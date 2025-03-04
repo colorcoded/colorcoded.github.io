@@ -29,7 +29,7 @@ const Navbar = () => {
       document.documentElement.setAttribute("data-theme", savedTheme);
     }, []);
     
-    const logoSrc = theme === "light" ? "/Navbar-Dark.png" : "/Navbar-Dark.png";
+    const logoSrc = theme === "light" ? "/Navbar-Dark.svg" : "/Navbar-Dark.svg";
 
     return (
     <nav className="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation">
