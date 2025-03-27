@@ -9,7 +9,7 @@ const TeamPage = () => {
   return (
     <>
       <Navbar />
-      <div className="section">
+      <div className="section team">
         <div className="container">
           <h1 className="title is-2 has-text-warning mt-6 has-text-centered is-family-sans-serif">
             The Faces of Our Chapter

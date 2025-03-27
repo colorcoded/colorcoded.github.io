@@ -37,42 +37,42 @@ const EventsPage = () => {
   return (
       <>
       <Navbar> </Navbar>
-      <div className="section">
-    {/* Intro Section */}
-    <div className="container">
-      <div className="columns is-vcentered">
-        <div className="column is-three-fifths is-offset-one-fifth">
-          <h1 className="title is-size-2 has-text-warning has-text-centered mt-6 is-family-sans-serif">
-            Staying Connected...
-          </h1>
-          <p className="subtitle is-size-4 mt-4 has-text-left-centered">
-            Don&apos;t miss out on our latest events! Check the calendar below, join our Discord, or subscribe to our newsletter to stay in the loop.
-          </p>
-          <div className="has-text-centered mt-5">
-            <button
-              className="button is-warning is-medium has-text-black has-text-weight-light"
-              onClick={handleSubscribeClick}
-            >
-              <FontAwesomeIcon icon={faNewspaper} className="mr-2" style={{ color: "inherit" }} />
-              Subscribe to Our Newsletter
-            </button>
+      <div className="section events">
+      {/* Intro Section */}
+      <div className="container">
+        <div className="columns is-vcentered">
+          <div className="column is-three-fifths is-offset-one-fifth">
+            <h1 className="title is-size-2 has-text-warning has-text-centered mt-6 is-family-sans-serif">
+              How to Get Involved
+            </h1>
+            <p className="subtitle is-5 mt-4 has-text-centered">
+              Don&apos;t miss out on our latest events! Subscribe to our newletter and become a part of the ColorStack community today.
+            </p>
+            <div className="has-text-centered mt-5">
+              <button
+                className="button is-warning is-medium has-text-black has-text-weight-light"
+                onClick={handleSubscribeClick}
+              >
+                <FontAwesomeIcon icon={faNewspaper} className="mr-2" style={{ color: "inherit" }} />
+                Subscribe to Our Newsletter
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
   
-        {/* Divider */}
-        <hr className="has-background-dark mt-5 mb-5" />
+      {/* Divider */}
+      <hr className="has-background-dark mt-5 mb-5" />
   
-        {/* Google Calendar Embed */}
-        <div className="container google-calendar-container">
-          <iframe
-            className="google-calendar-iframe"
-            src={calendarSrc}
-            style={{ border: "0" }}
-            title="Google Calendar"
-          ></iframe>
-        </div>
+      {/* Google Calendar Embed */}
+      <div className="container google-calendar-container">
+        <iframe
+          className="google-calendar-iframe"
+          src={calendarSrc}
+          style={{ border: "0" }}
+          title="Google Calendar"
+        ></iframe>
+      </div>
       </div>
       </>
     );

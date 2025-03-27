@@ -3,7 +3,7 @@ import { faTools, faUsers, faMicrophone } from "@fortawesome/free-solid-svg-icon
 
 const ThriveSection = () => {
   return (
-    <section className="section">
+    <section className="section pb-6 thrive">
       <div className="container">
         {/* Section Title */}
         <div className="has-text-centered mb-5">
@@ -14,13 +14,13 @@ const ThriveSection = () => {
         </div>
 
         {/* Columns */}
-        <div className="columns is-8 is-centered mt-6">
+        <div className="columns is-8 is-centered mt-6 pb-6">
           {/* Column 1: Workshops */}
           <div className="column has-text-centered">
             <figure className="image is-256x256 is-inline-block">
               <FontAwesomeIcon icon={faTools} size="3x" className="has-text-warning"/>
             </figure>
-            <h2 className="title is-4 mt-3">Workshops</h2>
+            <h2 className="title is-4">Workshops</h2>
             <p> An opportunity to sharpen coding and problem-solving skills, prepare for interviews, 
                 and connect with supportive peers. 
             </p>
@@ -31,7 +31,7 @@ const ThriveSection = () => {
             <figure className="image is-256x256 is-inline-block">
               <FontAwesomeIcon icon={faUsers} size="3x" className="has-text-warning"/>
             </figure>
-            <h2 className="title is-4 mt-3">Community</h2>
+            <h2 className="title is-4">Community</h2>
             <p>
               The heart of everything we do. You&apos;ll find supportive peers, inspiring mentors and countless opportunities to grow together.    
             </p>
@@ -42,7 +42,7 @@ const ThriveSection = () => {
             <figure className="image is-256x256 is-inline-block">
               <FontAwesomeIcon icon={faMicrophone} size="3x" className="has-text-warning"/>
             </figure>
-            <h2 className="title is-4 mt-3">Guest Speakers</h2>
+            <h2 className="title is-4">Guest Speakers</h2>
             <p>
               Our guest speakers bring industry insights,
               real-world experience, fresh perspectives,

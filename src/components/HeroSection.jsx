@@ -5,7 +5,6 @@ const HeroSection = () => {
         "/hero-images/hero1.jpg",
         "/hero-images/hero2.jpg",
         "/hero-images/hero3.jpg",
-        "/hero-images/hero4.jpg",
       ];
       const [currentImageIndex, setCurrentImageIndex] = useState(0);
     

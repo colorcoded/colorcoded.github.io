@@ -147,7 +147,6 @@ $instagram-hover-bg: rgba(lighten(#E1306C, 20%), 0.3); // Purple with opacity
     @media screen and (max-width: 1023px) {
       flex-direction: column; // Switch to column for mobile
       align-items: flex-start;
-
     }
   }
 }
@@ -173,4 +172,59 @@ $instagram-hover-bg: rgba(lighten(#E1306C, 20%), 0.3); // Purple with opacity
 
 .button.is-warning:hover {
   transform : translateY(-10px);
+}
+
+// Scroll Animations
+/* One-time fade-in and slide-up animation */
+@keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to elements */
+.hero {
+  .title, .subtitle,
+  p, .button, img {
+    opacity: 0;
+    animation: fade-down 1s ease-out forwards;
+  }
+
+  .title { animation-delay: 0.2s; }
+  .subtitle { animation-delay: 0.4s; }
+  p { animation-delay: 0.6s; }
+  .button { animation-delay: 0.8s; }
+  img { animation-delay: 1s; }
+}
+
+.thrive {
+  .title, .subtitle, .column,
+  p, .button, img {
+    opacity: 0;
+    animation: fade-down 1s linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%
+  }
+}
+
+.team {
+  .subtitle, a, p, img {
+    opacity: 0;
+    animation: fade-down 0.7s ease-out forwards;
+  }
+}
+
+.events {
+  .subtitle, a, p, img, 
+  .button, .iframe {
+    opacity: 0;
+    animation: fade-down 1s ease-out forwards;
+  }
+
+  .iframe { animation-delay: 0.7s; } 
 }
