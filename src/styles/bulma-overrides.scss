@@ -211,3 +211,20 @@ $instagram-hover-bg: rgba(lighten(#E1306C, 20%), 0.3); // Purple with opacity
     animation-range: entry 0% cover 20%
   }
 }
+
+.team {
+  .subtitle, a, p, img {
+    opacity: 0;
+    animation: fade-down 0.7s ease-out forwards;
+  }
+}
+
+.events {
+  .subtitle, a, p, img, 
+  .button, .iframe {
+    opacity: 0;
+    animation: fade-down 1s ease-out forwards;
+  }
+
+  .iframe { animation-delay: 0.7s; } 
+}
