@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserGroup, faCalendar, faEnvelope, faMoon, faSun} from "@fortawesome/free-solid-svg-icons";
@@ -31,8 +31,22 @@ const Navbar = () => {
     
     const logoSrc = theme === "light" ? "/Navbar-Dark.svg" : "/Navbar-Dark.svg";
 
+    const navbarRef = useRef(null);
+    useEffect(() => {
+      const handleClickOutside = (event) => {
+        if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+          setIsActive(false);
+        }
+      };
+
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside)
+      };
+    }, []);
+
     return (
-    <nav className="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation">
+    <nav ref={navbarRef} className="navbar is-black is-fixed-top" role="navigation" aria-label="main navigation">
     {/* ColorStack Logo */}
       <div className="navbar-brand">
         <Link className="navbar-item" to="/">
